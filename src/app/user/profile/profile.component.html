@@ -1,0 +1,334 @@
+<section class="profile_page px-lg-5">
+  <div class="container-fluid px-lg-3">
+    <div class="row">
+      <div class="col-lg-2 col-md-12 col-sm-12 col-12">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="my-subscription-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#my-subscription" type="button" role="tab"
+              aria-controls="my-subscription"
+              aria-selected="true">
+              <div class="icon_box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M2.3999 4.7999V19.1999C2.3999 20.5254 3.47442 21.5999 4.7999 21.5999H19.1999C20.5254 21.5999 21.5999 20.5254 21.5999 19.1999V4.7999M2.3999 4.7999C2.3999 3.47442 3.47442 2.3999 4.7999 2.3999H19.1999C20.5254 2.3999 21.5999 3.47442 21.5999 4.7999M2.3999 4.7999C2.3999 6.12539 3.47442 7.1999 4.7999 7.1999H19.1999C20.5254 7.1999 21.5999 6.12539 21.5999 4.7999M6.5999 14.3999H11.3999M6.5999 17.9999H9.5999"
+                    stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </div>
+              {{ 'subscriptionDetails.mySubscriptions' | translate }}</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="payment-detail-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#payment-detail" type="button" role="tab"
+              aria-controls="payment-detail" aria-selected="false">
+              <div class="icon_box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="16"
+                  viewBox="0 0 22 16" fill="none">
+                  <path
+                    d="M1.59954 5.19985H19.5995M5.19954 9.39985H8.19954M3.4 1H17.7996C19.1251 1 20.1996 2.07368 20.1996 3.39913L20.1999 12.401C20.1999 13.7265 19.1254 14.8 17.7999 14.8L3.40023 14.7998C2.07479 14.7998 1.00029 13.7253 1.00026 12.3999L1 3.40007C0.999962 2.07456 2.07449 1 3.4 1Z"
+                    stroke="#CCC5B9" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              {{ 'Paymentdetails.title' | translate }}</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="change-password-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#change-password" type="button" role="tab"
+              aria-controls="change-password" aria-selected="false">
+
+              <div class="icon_box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M6.52879 9.30234H6.66882M11.9999 9.30234H12.1399M17.3294 9.30234H17.4694M11.3999 14.7023H4.53324C3.35503 14.7023 2.3999 13.7472 2.3999 12.569V6.03568C2.3999 4.85747 3.35503 3.90234 4.53324 3.90234H19.4666C20.6448 3.90234 21.5999 4.85747 21.5999 6.03568V9.30234M15.4111 13.5974L16.8011 12.9024C17.8146 12.3957 19.0076 12.3957 20.0211 12.9024L21.4111 13.5974C21.4111 13.5974 21.4111 15.7874 21.4111 16.9424C21.4111 18.0974 20.3434 18.8771 18.4111 20.0974C16.4788 18.8771 15.4111 17.8474 15.4111 16.9424V13.5974Z"
+                    stroke="#CCC5B9" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              {{ 'changePassword.title' | translate }}</button>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9 col-md-12 col-sm-12 col-12 offset-lg-1">
+        <div class="tab-content" id="myTabContent">
+          <div class="tab-pane fade show active" id="my-subscription"
+            role="tabpanel"
+            aria-labelledby="my-subscription-tab">
+            <div class="monthly_plan">
+              <div class="active_status d-flex align-items-center">
+                <h2 *ngIf="orderdetails.length > 0 && subscriptionPlanVal == 'Yearly'">
+                  Yearly plan
+                </h2>
+                <h2 *ngIf="orderdetails.length > 0  && subscriptionPlanVal !== 'Yearly'">
+                Monthly plan
+                </h2>
+                <h2 *ngIf="orderdetails.length == 0">No Plan</h2>
+                <div class="active_rout">
+                  <span *ngIf="orderdetails.length>0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M15.3514 9.84843L10.7999 14.3999L9.24843 12.8484M11.9999 2.3999C6.69797 2.3999 2.3999 6.69797 2.3999 11.9999C2.3999 17.3018 6.69797 21.5999 11.9999 21.5999C17.3018 21.5999 21.5999 17.3018 21.5999 11.9999C21.5999 6.69797 17.3018 2.3999 11.9999 2.3999Z"
+                      stroke="#FAFAFA" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                  
+                  </span>
+                  <span class="ms-2" *ngIf="orderdetails.length > 0">Active</span>
+
+                <span *ngIf="orderdetails.length == 0">
+                  <svg viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#FFF"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>cross-circle</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-568.000000, -1087.000000)" fill="#FFF"> <path d="M584,1117 C576.268,1117 570,1110.73 570,1103 C570,1095.27 576.268,1089 584,1089 C591.732,1089 598,1095.27 598,1103 C598,1110.73 591.732,1117 584,1117 L584,1117 Z M584,1087 C575.163,1087 568,1094.16 568,1103 C568,1111.84 575.163,1119 584,1119 C592.837,1119 600,1111.84 600,1103 C600,1094.16 592.837,1087 584,1087 L584,1087 Z M589.717,1097.28 C589.323,1096.89 588.686,1096.89 588.292,1097.28 L583.994,1101.58 L579.758,1097.34 C579.367,1096.95 578.733,1096.95 578.344,1097.34 C577.953,1097.73 577.953,1098.37 578.344,1098.76 L582.58,1102.99 L578.314,1107.26 C577.921,1107.65 577.921,1108.29 578.314,1108.69 C578.708,1109.08 579.346,1109.08 579.74,1108.69 L584.006,1104.42 L588.242,1108.66 C588.633,1109.05 589.267,1109.05 589.657,1108.66 C590.048,1108.27 590.048,1107.63 589.657,1107.24 L585.42,1103.01 L589.717,1098.71 C590.11,1098.31 590.11,1097.68 589.717,1097.28 L589.717,1097.28 Z" id="cross-circle" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                </span>
+                 
+                  <span class="ms-2" *ngIf="orderdetails.length == 0">InActive</span>
+                </div>
+              </div>
+              <ul class="m-0 mt-4 p-0"  *ngIf="orderdetails.length > 0">
+                <li class="d-flex align-items-center mb-2">
+                  <span><b> {{ 'subscriptionDetails.subscriptionDetails' | translate }}</b></span>
+                  <span *ngIf="subscriptionPlanVal == 'Yearly'">{{ 'checkout.yearlyPrice' | translate }}</span>
+                  <span *ngIf="subscriptionPlanVal !== 'Yearly'">{{ 'checkout.monthlyPrice' | translate }}</span>
+                </li>
+                <li class="d-flex align-items-center mb-2">
+                  <span><b>{{ 'subscriptionDetails.dateofpurchase' | translate }}</b></span>
+                  <span>{{subscriptionDate | date: 'dd MMMM yyyy' }}</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <span><b>{{ 'subscriptionDetails.validTill' | translate }}</b></span>
+                  <span *ngIf="subscriptionPlanVal == 'Yearly'">{{ subscriptionEndDateYarly | date: 'dd MMMM yyyy' }}</span>
+                  <span *ngIf="subscriptionPlanVal !== 'Yearly'">{{ subscriptionEndDateMonthly | date: 'dd MMMM yyyy' }}</span>
+
+
+                </li>
+              </ul>
+
+              <ul class="m-0 mt-4 p-0"  *ngIf="orderdetails.length == 0">
+                <li class="d-flex align-items-center mb-2">
+                  <!-- <span><b> {{ 'subscriptionDetails.subscriptionDetails' | translate }}</b></span> -->
+                  <span>No Active plan Please buy suscription</span>
+                  
+                </li>
+               
+              </ul>
+
+
+              <div class="row mt-lg-5 mt-md-4 mt-4 pt-lg-3">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-12">
+                  <div class="active_status d-flex align-items-center mb-4">
+                    <h2>{{ 'subscriptionDetails.invoiceHistory' | translate }}</h2>
+                  </div>
+                  <div class="profile_table">
+                    <table class="table" >
+                      <tr *ngFor="let order of orderdetails">
+                        <td>{{ order.created_at | date:'dd MMMM yyyy HH:mm:ss' }}</td>
+
+                        <td>{{ '$' + order.amount }}</td>
+                        <td>
+                          <div class="padi_status text-center">
+                            {{ order.payment_method === 'card' ? ('subscriptionDetails.paid' | translate) : ('subscriptionDetails.unpaid' | translate) }}
+                          </div>
+                        </td>
+                        <td class="text-center">
+                          <!-- {{ order.subscription_plan }} -->
+                          {{ order.subscription_plan === 'Monthly' ? ('subscriptionDetails.monthlyPlan' | translate) : ('subscriptionDetails.yearlyPlan' | translate) }}
+                        </td>
+                        <td class="text-center">
+                          <div class="download gap-2 d-flex align-items-center" (click)="downloadReceipt(order)" >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                              <path
+                                d="M4.71509 20.423C5.10891 20.8202 5.64306 21.0433 6.20001 21.0433H18.8C19.357 21.0433 19.8911 20.8202 20.2849 20.423M12.5012 2.95654V14.9565M12.5012 14.9565L17.3012 10.3714M12.5012 14.9565L7.70118 10.3714"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            {{ 'subscriptionDetails.downloadReceipt' | translate }}
+                          </div>
+                        </td>
+                      </tr>
+                     
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="payment-detail" role="tabpanel"
+            aria-labelledby="payment-detail-tab">
+
+            <div class="monthly_plan">
+              <div class="active_status flex-column d-flex align-items-start">
+                <h2 class="mb-4">{{ 'Paymentdetails.title' | translate }}</h2>
+                <p class="mb-0">{{ 'Paymentdetails.Savedcreditcards' | translate }}</p>
+              </div>
+              <div class="col-lg-6 col-md-8 col-sm-12 col-12 mt-3">
+                <form action class="payment_detail">
+                  <div class="form d-flex align-items-center mb-4 pb-lg-3">
+                    <label>
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        width="50" height="16" viewBox="0 0 50 16" fill="none">
+                        <g clip-path="url(#clip0_2658_2226)">
+                          <path
+                            d="M32.0855 0.0195312C28.5878 0.0195312 25.4621 1.83248 25.4621 5.18203C25.4621 9.02331 31.0057 9.2886 31.0057 11.2184C31.0057 12.0309 30.0745 12.7583 28.4841 12.7583C26.227 12.7583 24.5401 11.7419 24.5401 11.7419L23.8183 15.122C23.8183 15.122 25.7616 15.9805 28.3417 15.9805C32.1658 15.9805 35.1749 14.0785 35.1749 10.6718C35.1749 6.61272 29.6083 6.35528 29.6083 4.56417C29.6083 3.92758 30.3726 3.23018 31.9585 3.23018C33.7478 3.23018 35.2077 3.96934 35.2077 3.96934L35.9141 0.704798C35.9141 0.704798 34.3257 0.0195312 32.0855 0.0195312ZM0.0847153 0.265935L0 0.758694C0 0.758694 1.47152 1.02798 2.79684 1.56521C4.50327 2.1812 4.62487 2.53983 4.91225 3.65366L8.04396 15.7264H12.2421L18.7097 0.265935H14.5212L10.3654 10.7776L8.66961 1.86739C8.51408 0.84765 7.7263 0.265935 6.76203 0.265935H0.0847153ZM20.3939 0.265935L17.1082 15.7264H21.1023L24.3765 0.265886H20.3939V0.265935ZM42.6704 0.265935C41.7072 0.265935 41.197 0.781574 40.8225 1.68262L34.9709 15.7264H39.1594L39.9698 13.3857H45.0726L45.5654 15.7264H49.2611L46.0369 0.265935H42.6704ZM43.2151 4.44287L44.4566 10.2444H41.1304L43.2151 4.44287Z"
+                            fill="#403D39" />
+                        </g>
+                        <defs>
+                          <clippath id="clip0_2658_2226">
+                            <rect width="49.2611" height="16" fill="white" />
+                          </clippath>
+                        </defs>
+                      </svg>
+                    </label>
+                    <select name="visa" id="visa">
+                      <option value>{{ 'Paymentdetails.visaLabel' | translate }}</option>
+                      <option value>{{ 'Paymentdetails.visaLabel' | translate }}</option>
+                      <option value>{{ 'Paymentdetails.visaLabel' | translate }}</option>
+                    </select>
+                  </div>
+                  <div class="form d-flex align-items-center">
+                    <label>
+                      {{ 'Paymentdetails.PaypalIDlebal' | translate }}
+                    </label>
+                    <input type="text"   [placeholder]="'Paymentdetails.paypalEmailPlaceholder' | translate"
+                      id="paypal_id">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="change-password" role="tabpanel"
+            aria-labelledby="change-password-tab">
+
+            <div class="monthly_plan">
+              <div class="active_status flex-column d-flex align-items-start">
+                <h2>{{ 'changePassword.title' | translate }}</h2>
+              </div>
+              <div class="col-lg-7 col-md-8 col-sm-12 col-12 mt-4">
+                <form action class="payment_detail change_password" [formGroup]="changePasswordForm" (ngSubmit)="onSubmit()">
+                  <div class="form d-flex align-items-center mb-4 pb-lg-3">
+                    <label>
+                      {{ 'changePassword.currentPasswordLabel' | translate }}
+                    </label>
+                    <div class="w-100 position-relative">
+                      <input [type]="showPassword ? 'text' : 'password'" 
+                      formControlName="currentPassword" 
+                      [placeholder]="'changePassword.currentPasswordPlaceholder' | translate"
+                        id="current_password" [ngClass]="{ 'is-invalid': submitted && f.currentPassword.errors }">
+                        <div *ngIf="submitted && f.currentPassword.errors" class="invalid-feedback">
+                          <div *ngIf="f.currentPassword.errors.required">{{ 'changePassword.invalidNewPasswordMessage.required' | translate }}</div>
+                          <div *ngIf="f.currentPassword.errors.pattern">{{ 'changePassword.invalidNewPasswordMessage.pattern' | translate }}</div>
+                        </div>
+                      <div class="eye_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                          height="40" viewBox="0 0 45 40" fill="none"  (click)="showPassword = !showPassword"
+                          [class.hide]="showPassword">
+                          <g opacity="0.5">
+                            <path
+                              d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                              fill="#403D39" />
+                          </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                        height="40" viewBox="0 0 45 40" fill="none"  (click)="showPassword = !showPassword"
+                        [class.hide]="!showPassword">
+                        <g opacity="0.5">
+                          <path
+                            d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                            fill="#403D39" />
+                        </g>
+                      </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form d-flex align-items-center">
+                    <label>
+                      {{ 'changePassword.newPasswordLabel' | translate }}
+                    </label>
+                    <div class="w-100 position-relative">
+                      <input formControlName="newPassword" [type]="showHidePassword ? 'text' : 'password'"
+                      [placeholder]="'changePassword.newPasswordPlaceholder' | translate"
+                        id="current_password" [ngClass]="{ 'is-invalid': submitted && f.newPassword.errors }">
+                        <div *ngIf="submitted && f.newPassword.errors" class="invalid-feedback">
+                          <div *ngIf="f.newPassword.errors.required">{{ 'changePassword.invalidNewPasswordMessage.required' | translate }}</div>
+                          <div *ngIf="f.newPassword.errors.pattern">{{ 'changePassword.invalidNewPasswordMessage.pattern' | translate }}</div>
+                        </div>
+                      <div class="eye_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                          height="40" viewBox="0 0 45 40" fill="none"  (click)="showHidePassword = !showHidePassword"
+                          [class.hide]="showHidePassword">
+                          <g opacity="0.5">
+                            <path
+                              d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                              fill="#403D39" />
+                          </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                          height="40" viewBox="0 0 45 40" fill="none"  (click)="showHidePassword = !showHidePassword"
+                          [class.hide]="!showHidePassword">
+                          <g opacity="0.5">
+                            <path
+                              d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                              fill="#403D39" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form pwd_ins d-flex align-items-center mt-3 mb-3">
+                    <label>
+                    </label>
+                    <p class="m-0"> {{ 'changePassword.passwordRequirements' | translate }}</p>
+                  </div>
+                  <div class="form d-flex align-items-center">
+                    <label>
+                      {{ 'changePassword.confirmPasswordLabel' | translate }}
+                    </label>
+                    <div class="w-100 position-relative">
+                      <input formControlName="confirmPassword"
+                       [type]="showHideConfPassword ? 'text' : 'password'" 
+                       [ngClass]="{ 'is-invalid': submitted && f.confirmPassword.errors }"
+                       [placeholder]="'changePassword.confirmPasswordPlaceholder' | translate"
+                        id="current_password">
+                        <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+                          <div *ngIf="f.confirmPassword.errors.required">{{ 'changePassword.invalidConfirmPasswordMessage.required' | translate }}</div>
+                          <div *ngIf="f.confirmPassword.errors.pattern">{{ 'changePassword.invalidConfirmPasswordMessage.pattern' | translate }}</div>
+                          <div *ngIf="f.confirmPassword.errors.mustMatch">{{ 'changePassword.invalidConfirmPasswordMessage.mustMatch' | translate }}</div>
+                        </div>
+                      <div class="eye_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                          height="40" viewBox="0 0 45 40" fill="none"  (click)="showHideConfPassword = !showHideConfPassword"
+                          [class.hide]="showHideConfPassword">
+                          <g opacity="0.5">
+                            <path
+                              d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                              fill="#403D39" />
+                          </g>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45"
+                          height="40" viewBox="0 0 45 40" fill="none"  (click)="showHideConfPassword = !showHideConfPassword"
+                          [class.hide]="!showHideConfPassword">
+                          <g opacity="0.5">
+                            <path
+                              d="M22.2 12C16.2 12 11.076 15.3173 9 20C11.076 24.6827 16.2 28 22.2 28C28.2 28 33.324 24.6827 35.4 20C33.324 15.3173 28.2 12 22.2 12ZM22.2 25.3333C18.888 25.3333 16.2 22.944 16.2 20C16.2 17.056 18.888 14.6667 22.2 14.6667C25.512 14.6667 28.2 17.056 28.2 20C28.2 22.944 25.512 25.3333 22.2 25.3333ZM22.2 16.8C20.208 16.8 18.6 18.2293 18.6 20C18.6 21.7707 20.208 23.2 22.2 23.2C24.192 23.2 25.8 21.7707 25.8 20C25.8 18.2293 24.192 16.8 22.2 16.8Z"
+                              fill="#403D39" />
+                          </g>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form d-flex align-items-center">
+                    <label>
+                    </label>
+                    <button class="btn btn-primary mt-4 pt-lg-3">{{ 'changePassword.resetPasswordButton' | translate }}</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

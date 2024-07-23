@@ -1,0 +1,83 @@
+<div id="pdfId" class="bg-img-of-order-sec">
+  <div class="order-section-navbar">
+    <div class="logoo cpointer">
+      <a [routerLink]="[ '' ]">
+        <img src="assets/images/brainy-logo.png" alt class="logo-on-mbl"><img
+          src="assets/images/brainyclock-logo-blue.png" alt class="logo-on-pc">
+      </a>
+    </div>
+    <div class="cpointer hello-user-order-sec">
+      <a class="user" [routerLink]="[ '/profile' ]">Hello, {{username}}</a>
+    </div>
+  </div>
+  <div class="order-detailss">
+    <div class="back-arrow d-flex  align-items-center justify-content-evenly">
+      <div (click)="gotoSubscriptionSuccessfull()"
+        class="back-arrow-img noprint"><img src="assets/images/go-back.png"
+          alt="Back" class="cpointer"></div>
+      <div class="order-detail-heading">Order details</div>
+    </div>
+    <div
+      class="icons-of-detail-sec d-flex align-items-center justify-content-evenly">
+      <div (click)="print()" class="d-flex align-items-center">
+        <img src="assets/images/printer.png" alt> &#160;&#160;&#160; <div
+          class="cpointer">
+          Print</div>
+      </div>
+      <div class="d-flex align-items-center" (click)="downloadAsPDF()">
+        <img src="assets/images/download-cloud.png" alt> &#160;&#160;&#160; <div
+          style="cursor: pointer;">Download
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="payment-details">
+    <table id="pdfTable" #pdfTable>
+      <tr>
+        <td class="thin-texts">Order number : </td>
+        <td class="bold-texts">CPKL234PRE12234</td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Subscription plan : </td>
+        <td *ngIf="!packageService.isTrial.value" class="bold-texts">
+          {{packageService.getPackageName(packageService.packageType.value)}},
+          ${{packageService.get(packageService.packageType.value).price}} /
+          month</td>
+        <td *ngIf="packageService.isTrial.value" class="bold-texts">Enterprise,
+          Free trial (30 days) <br>
+          <div class="mini-text">${{packageService.get(packageService.packageType.value).price}}
+            / month, after the
+            trial ends.</div>
+        </td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Billing type :</td>
+        <td class="bold-texts">Annual subscription</td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Order total :</td>
+        <td class="bold-texts">${{packageService.pacakeFinalPrice(packageService.packageType.value)}}</td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Payment method :</td>
+        <td class="bold-texts">Credit card</td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Date of purchase :</td>
+        <td class="bold-texts">{{packageService.dateOfPurchase() | date:
+          'dd MMMM yyyy' }}
+        </td>
+      </tr>
+      <tr>
+        <td class="thin-texts">Subscription valid till :</td>
+        <td *ngIf="!packageService.isTrial.value" class="bold-texts">{{packageService.subscriptionValidTill()
+          | date:
+          'dd MMMM yyyy' }}</td>
+        <td *ngIf="packageService.isTrial.value" class="bold-texts">{{packageService.trialTill()
+          | date: 'dd MMMM yyyy'
+          }}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<footer>
+  <div class="mb-60">
+    <h2 class="footer-heading text-center">
+      {{ 'footer.heading' | translate }}
+    </h2>
+  </div>
+
+  <div class="footer-btn-container text-center">
+    <button (click)="Show()" class="btnn contact-btn mx-2 my-2 contact-toggle">{{ 'footer.buttons.contactUs' | translate }}</button>
+    <a [routerLink]="[ 'get-app']">
+      <button class=" btnn contact-btn mx-2 my-2">{{ 'footer.buttons.getApp' | translate }}</button>
+    </a>
+  </div>
+
+  <div class="text-center mt-5">
+    <img src="assets/images/new-home/hr_line.png" alt="" />
+  </div>
+</footer>
+<app-contact (editedEmitter)="updateValue($event)" [isShow]="isShow"></app-contact>

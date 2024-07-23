@@ -1,0 +1,340 @@
+<header class="px-lg-5 py-lg-4 py-md-3 py-2">
+  <div class="container-fluid px-lg-3">
+    <div class="row">
+      <div class="col-12">
+
+
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a class="navbar-brand" [routerLink]="[ '' ]" *ngIf="componentscurrentUrl == '/'">
+            <!-- <a class="navbar-brand" *ngIf="componentscurrentUrl == '/' "> -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" fill="none">
+              <path
+                d="M7.69721 5.49802C7.69721 5.45021 7.69721 5.49802 7.69721 5.49802C7.50598 5.49802 7.31474 5.49802 7.17132 5.49802C6.07171 5.49802 5.11554 5.73706 4.39841 6.16734C3.68127 6.64543 3.10757 7.17133 2.7251 7.74503V2.72511C2.67729 1.24304 1.48207 0.047821 0 0.047821V12.0478C0 13.7211 0.621514 15.251 1.67331 16.4462C2.86853 17.8805 4.68526 18.741 6.69323 18.741C6.93227 18.741 7.12351 18.7411 7.31474 18.6932C10.7092 18.3586 13.3386 15.5379 13.3386 12.0478C13.3386 8.74902 10.9004 5.97611 7.69721 5.49802ZM9.51394 15.1554C8.749 15.9203 7.79283 16.3506 6.64542 16.3506C5.49801 16.3506 4.54183 15.9681 3.8247 15.1554C3.10757 14.3426 2.7251 13.3387 2.7251 12.0478C2.7251 10.8048 3.10757 9.753 3.8247 8.94025C4.54183 8.1275 5.49801 7.74503 6.64542 7.74503C7.41036 7.74503 8.12749 7.93627 8.7012 8.27093C9.2749 8.6534 9.75299 9.13149 10.0877 9.80081C10.4223 10.4701 10.6135 11.1873 10.6135 12C10.6135 13.3387 10.2789 14.3905 9.51394 15.1554Z"
+                fill="#FAFAFA" />
+              <path
+                d="M15.2988 18.4064V5.73705H17.7371L17.9761 8.12749C18.4064 7.31474 19.0279 6.64541 19.8407 6.16733C20.6534 5.68924 21.6096 5.4502 22.7092 5.4502V8.27091H21.9921C21.2271 8.27091 20.5578 8.41434 19.9841 8.65338C19.4104 8.89243 18.9323 9.32271 18.5976 9.89641C18.263 10.4701 18.0717 11.2829 18.0717 12.3347V18.4064H15.2988Z"
+                fill="#FAFAFA" />
+              <path
+                d="M28.255 18.6932C27.2032 18.6932 26.2949 18.502 25.6256 18.1673C24.9084 17.8326 24.4303 17.3546 24.0479 16.733C23.7132 16.1593 23.522 15.49 23.522 14.8207C23.522 13.5777 24.0001 12.6215 24.9562 11.9044C25.9124 11.1872 27.2511 10.8526 29.02 10.8526H32.3188V10.6135C32.3188 9.60954 32.0319 8.89241 31.506 8.41432C30.9801 7.93623 30.263 7.69719 29.4503 7.69719C28.6853 7.69719 28.0638 7.88842 27.4901 8.22309C27.3467 8.3187 27.2511 8.41432 27.1554 8.50994C26.2949 9.32269 25.2431 9.84858 24.0479 9.84858H23.761C23.8566 8.94022 24.1435 8.12747 24.6694 7.50595C25.1953 6.83663 25.8646 6.35854 26.7252 6.02388C27.5379 5.68922 28.4463 5.49799 29.4503 5.49799C31.2192 5.49799 32.6056 5.97607 33.5618 6.88444C34.518 7.79281 34.9961 9.08364 34.9961 10.6613V18.4542H32.6534L32.4144 16.3028C32.0797 17.0199 31.5538 17.5936 30.8367 18.0717C30.263 18.4542 29.3546 18.6932 28.255 18.6932ZM28.7809 16.494C29.4981 16.494 30.1196 16.3028 30.6455 15.9681C31.1236 15.6334 31.5538 15.1554 31.8407 14.5817C32.1275 14.0079 32.3188 13.3864 32.3666 12.6693H29.3546C28.3028 12.6693 27.5379 12.8605 27.0598 13.243C26.6295 13.6255 26.3905 14.1036 26.3905 14.6295C26.3905 15.2032 26.6295 15.6813 27.0598 16.0159C27.4423 16.3506 28.016 16.494 28.7809 16.494Z"
+                fill="#FAFAFA" />
+              <path
+                d="M38.725 3.34661C38.1991 3.34661 37.8167 3.20319 37.482 2.86853C37.1473 2.53386 37.0039 2.15139 37.0039 1.67331C37.0039 1.19522 37.1473 0.812749 37.482 0.478088C37.8167 0.143426 38.2469 0 38.725 0C39.2031 0 39.6334 0.143426 39.968 0.478088C40.3027 0.812749 40.4461 1.19522 40.4461 1.67331C40.4461 2.15139 40.3027 2.53386 39.968 2.86853C39.6334 3.20319 39.2509 3.34661 38.725 3.34661ZM37.3864 18.4064V5.73705C38.8684 5.73705 40.1115 6.93227 40.1115 8.46215V18.4064H37.3864Z"
+                fill="#FAFAFA" />
+              <path
+                d="M42.6455 18.4064V5.73707H45.0359L45.2272 7.93627C45.6097 7.17133 46.1834 6.54982 46.9483 6.07173C47.7132 5.64145 48.5738 5.4024 49.5778 5.4024C51.1077 5.4024 52.3029 5.88049 53.1634 6.83667C54.024 7.79284 54.4543 9.22711 54.4543 11.0916V18.3586H51.777V11.4263C51.777 8.98806 50.773 7.74503 48.765 7.74503C47.761 7.74503 46.9483 8.0797 46.279 8.79683C45.6097 9.51396 45.275 10.5179 45.275 11.8566V18.4064H42.6455Z"
+                fill="#FAFAFA" />
+              <path
+                d="M57.7053 24L60.3826 18.1673L60.0001 17.3546L54.9802 5.73703C56.7491 5.73703 58.3746 6.78882 59.044 8.46213L61.8169 15.1075L64.7332 8.36651C65.4025 6.78882 66.9802 5.73703 68.7013 5.73703L60.526 24H57.7053Z"
+                fill="#FAFAFA" />
+              <path
+                d="M74.7728 18.6932C73.5298 18.6932 72.4302 18.4064 71.4262 17.8327C70.47 17.259 69.7051 16.494 69.1314 15.4901C68.5577 14.4861 68.3186 13.3387 68.3186 12.0478C68.3186 10.757 68.6055 9.60958 69.1314 8.60559C69.7051 7.60161 70.47 6.83667 71.4262 6.26296C72.3823 5.68926 73.5298 5.4024 74.7728 5.4024C76.3505 5.4024 77.6413 5.83268 78.6931 6.64543C79.7449 7.45818 80.462 8.55778 80.7489 9.94424H80.3664C79.1712 9.94424 78.0238 9.41834 77.1632 8.60559C77.0676 8.50997 76.9242 8.41436 76.8286 8.31874C76.2549 7.93627 75.5855 7.74503 74.7728 7.74503C74.1035 7.74503 73.482 7.88846 72.9561 8.22312C72.3824 8.55778 71.9521 9.03587 71.6174 9.65739C71.2828 10.2789 71.0915 11.0916 71.0915 12C71.0915 12.9562 71.2828 13.7211 71.6174 14.3426C71.9521 14.9642 72.4302 15.4901 72.9561 15.8247C73.5298 16.1594 74.1513 16.3506 74.7728 16.3506C75.5377 16.3506 76.2549 16.1594 76.8286 15.7769C76.972 15.6813 77.0676 15.5857 77.1632 15.4901C78.0716 14.6295 79.1712 14.1036 80.4142 14.1036H80.7967C80.5098 15.4422 79.8405 16.5418 78.7409 17.4024C77.6413 18.3108 76.3505 18.6932 74.7728 18.6932Z"
+                fill="#FAFAFA" />
+              <path d="M82.6614 18.4064V0.047821C84.1434 0.047821 85.3865 1.24304 85.3865 2.77292V18.4064H82.6614Z"
+                fill="#FAFAFA" />
+              <path
+                d="M93.7052 18.6932C92.51 18.6932 91.4104 18.4064 90.4542 17.8805C89.498 17.3068 88.7331 16.5418 88.1594 15.5379C87.5857 14.5339 87.2988 13.3865 87.2988 12.0478C87.2988 10.7092 87.5857 9.56177 88.1594 8.55778C88.7331 7.5538 89.498 6.78886 90.4542 6.21515C91.4104 5.64145 92.51 5.4024 93.7052 5.4024C94.9004 5.4024 96 5.68926 96.9562 6.21515C97.9124 6.78886 98.6773 7.5538 99.251 8.55778C99.8247 9.56177 100.112 10.7092 100.112 12.0478C100.112 13.3865 99.8247 14.5339 99.251 15.5379C98.6773 16.5418 97.9124 17.3068 96.9562 17.8805C96 18.4542 94.9004 18.6932 93.7052 18.6932ZM93.7052 16.3984C94.3745 16.3984 94.9482 16.255 95.5219 15.9203C96.0956 15.5857 96.5259 15.1076 96.8606 14.4861C97.1952 13.8646 97.3865 13.0518 97.3865 12.0956C97.3865 11.1395 97.243 10.3267 96.9084 9.70519C96.5737 9.08368 96.1434 8.60559 95.5697 8.27093C94.996 7.93627 94.4223 7.79284 93.753 7.79284C93.0837 7.79284 92.51 7.93627 91.9363 8.27093C91.3626 8.60559 90.9323 9.08368 90.5976 9.70519C90.263 10.3267 90.0717 11.1395 90.0717 12.0956C90.0717 13.0518 90.263 13.8646 90.5976 14.4861C90.9323 15.1076 91.3626 15.5857 91.9363 15.9203C92.4622 16.2072 93.0359 16.3984 93.7052 16.3984Z"
+                fill="#FAFAFA" />
+              <path
+                d="M108 18.6932C106.757 18.6932 105.657 18.4064 104.653 17.8327C103.697 17.259 102.932 16.494 102.359 15.4901C101.785 14.4861 101.546 13.3387 101.546 12.0478C101.546 10.757 101.833 9.60958 102.359 8.60559C102.932 7.60161 103.697 6.83667 104.653 6.26296C105.61 5.68926 106.757 5.4024 108 5.4024C109.578 5.4024 110.869 5.83268 111.92 6.64543C112.972 7.45818 113.689 8.55778 113.976 9.94424H113.594C112.398 9.94424 111.251 9.41834 110.391 8.60559C110.295 8.50997 110.151 8.41436 110.056 8.31874C109.482 7.93627 108.813 7.74503 108 7.74503C107.331 7.74503 106.709 7.88846 106.183 8.22312C105.61 8.55778 105.179 9.03587 104.845 9.65739C104.51 10.2789 104.319 11.0916 104.319 12C104.319 12.9562 104.51 13.7211 104.845 14.3426C105.179 14.9642 105.657 15.4901 106.183 15.8247C106.757 16.1594 107.379 16.3506 108 16.3506C108.765 16.3506 109.482 16.1594 110.056 15.7769C110.199 15.6813 110.295 15.5857 110.391 15.4901C111.299 14.6295 112.398 14.1036 113.642 14.1036H114.024C113.737 15.4422 113.068 16.5418 111.968 17.4024C110.916 18.3108 109.578 18.6932 108 18.6932Z"
+                fill="#FAFAFA" />
+              <path
+                d="M115.936 18.4064V0.047821C117.418 0.047821 118.661 1.24304 118.661 2.77292V10.996L123.49 5.78487H126.741L121.339 11.5219L127.506 18.4542H124.112L118.661 12V18.4542H115.936V18.4064Z"
+                fill="#FAFAFA" />
+            </svg>
+          </a>
+          <a *ngIf="componentscurrentUrl != '/' ">
+            <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" fill="none">
+              <path
+                d="M7.69721 5.49805C7.69721 5.45024 7.69721 5.49805 7.69721 5.49805C7.50598 5.49805 7.31474 5.49805 7.17132 5.49805C6.07171 5.49805 5.11554 5.7371 4.39841 6.16737C3.68127 6.64546 3.10757 7.17136 2.7251 7.74506V2.72514C2.67729 1.24307 1.48207 0.0478516 0 0.0478516V12.0479C0 13.7212 0.621514 15.251 1.67331 16.4463C2.86853 17.8805 4.68526 18.7411 6.69323 18.7411C6.93227 18.7411 7.12351 18.7411 7.31474 18.6933C10.7092 18.3586 13.3386 15.5379 13.3386 12.0479C13.3386 8.74905 10.9004 5.97614 7.69721 5.49805ZM9.51394 15.1554C8.749 15.9204 7.79283 16.3506 6.64542 16.3506C5.49801 16.3506 4.54183 15.9682 3.8247 15.1554C3.10757 14.3427 2.7251 13.3387 2.7251 12.0479C2.7251 10.8048 3.10757 9.75303 3.8247 8.94028C4.54183 8.12753 5.49801 7.74506 6.64542 7.74506C7.41036 7.74506 8.12749 7.9363 8.7012 8.27096C9.2749 8.65343 9.75299 9.13152 10.0877 9.80084C10.4223 10.4702 10.6135 11.1873 10.6135 12C10.6135 13.3387 10.2789 14.3905 9.51394 15.1554Z"
+                fill="#403D39" />
+              <path
+                d="M15.2988 18.4064V5.73705H17.7371L17.9761 8.12749C18.4064 7.31474 19.0279 6.64541 19.8407 6.16733C20.6534 5.68924 21.6096 5.4502 22.7092 5.4502V8.27091H21.9921C21.2271 8.27091 20.5578 8.41434 19.9841 8.65338C19.4104 8.89243 18.9323 9.32271 18.5976 9.89641C18.263 10.4701 18.0717 11.2829 18.0717 12.3347V18.4064H15.2988Z"
+                fill="#403D39" />
+              <path
+                d="M28.2546 18.6933C27.2028 18.6933 26.2944 18.502 25.6251 18.1674C24.9079 17.8327 24.4299 17.3546 24.0474 16.7331C23.7127 16.1594 23.5215 15.4901 23.5215 14.8208C23.5215 13.5777 23.9996 12.6216 24.9557 11.9044C25.9119 11.1873 27.2506 10.8526 29.0195 10.8526H32.3183V10.6136C32.3183 9.6096 32.0314 8.89247 31.5055 8.41438C30.9797 7.93629 30.2625 7.69725 29.4498 7.69725C28.6848 7.69725 28.0633 7.88849 27.4896 8.22315C27.3462 8.31876 27.2506 8.41438 27.1549 8.51C26.2944 9.32275 25.2426 9.84864 24.0474 9.84864H23.7605C23.8561 8.94028 24.143 8.12753 24.6689 7.50602C25.1948 6.83669 25.8641 6.3586 26.7247 6.02394C27.5374 5.68928 28.4458 5.49805 29.4498 5.49805C31.2187 5.49805 32.6051 5.97613 33.5613 6.8845C34.5175 7.79287 34.9956 9.0837 34.9956 10.6614V18.4542H32.653L32.4139 16.3028C32.0793 17.02 31.5534 17.5937 30.8362 18.0718C30.2625 18.4542 29.3542 18.6933 28.2546 18.6933ZM28.7804 16.4941C29.4976 16.4941 30.1191 16.3028 30.645 15.9682C31.1231 15.6335 31.5534 15.1554 31.8402 14.5817C32.1271 14.008 32.3183 13.3865 32.3661 12.6694H29.3542C28.3024 12.6694 27.5374 12.8606 27.0593 13.2431C26.6291 13.6255 26.39 14.1036 26.39 14.6295C26.39 15.2032 26.6291 15.6813 27.0593 16.016C27.4418 16.3506 28.0155 16.4941 28.7804 16.4941Z"
+                fill="#403D39" />
+              <path
+                d="M38.725 3.34661C38.1991 3.34661 37.8167 3.20319 37.482 2.86853C37.1473 2.53386 37.0039 2.15139 37.0039 1.67331C37.0039 1.19522 37.1473 0.812749 37.482 0.478088C37.8167 0.143426 38.2469 0 38.725 0C39.2031 0 39.6334 0.143426 39.968 0.478088C40.3027 0.812749 40.4461 1.19522 40.4461 1.67331C40.4461 2.15139 40.3027 2.53386 39.968 2.86853C39.6334 3.20319 39.2509 3.34661 38.725 3.34661ZM37.3864 18.4064V5.73705C38.8684 5.73705 40.1115 6.93227 40.1115 8.46215V18.4064H37.3864Z"
+                fill="#403D39" />
+              <path
+                d="M42.6455 18.4063V5.73701H45.0359L45.2272 7.93621C45.6097 7.17127 46.1834 6.54975 46.9483 6.07167C47.7132 5.64139 48.5738 5.40234 49.5778 5.40234C51.1077 5.40234 52.3029 5.88043 53.1634 6.83661C54.024 7.79278 54.4543 9.22705 54.4543 11.0916V18.3585H51.777V11.4262C51.777 8.988 50.773 7.74497 48.765 7.74497C47.761 7.74497 46.9483 8.07963 46.279 8.79677C45.6097 9.5139 45.275 10.5179 45.275 11.8565V18.4063H42.6455Z"
+                fill="#403D39" />
+              <path
+                d="M57.7056 24L60.3829 18.1673L60.0004 17.3546L54.9805 5.73706C56.7494 5.73706 58.3749 6.78885 59.0442 8.46216L61.8171 15.1076L64.7335 8.36654C65.4028 6.78885 66.9805 5.73706 68.7016 5.73706L60.5263 24H57.7056Z"
+                fill="#403D39" />
+              <path
+                d="M74.7725 18.6932C73.5295 18.6932 72.4299 18.4063 71.4259 17.8326C70.4698 17.2589 69.7048 16.494 69.1311 15.49C68.5574 14.486 68.3184 13.3386 68.3184 12.0478C68.3184 10.7569 68.6052 9.60952 69.1311 8.60553C69.7048 7.60155 70.4698 6.83661 71.4259 6.2629C72.3821 5.6892 73.5295 5.40234 74.7725 5.40234C76.3502 5.40234 77.6411 5.83262 78.6929 6.64537C79.7447 7.45812 80.4618 8.55772 80.7486 9.94418H80.3662C79.171 9.94418 78.0235 9.41828 77.163 8.60553C77.0674 8.50991 76.9239 8.4143 76.8283 8.31868C76.2546 7.93621 75.5853 7.74497 74.7725 7.74497C74.1032 7.74497 73.4817 7.8884 72.9558 8.22306C72.3821 8.55772 71.9518 9.03581 71.6172 9.65732C71.2825 10.2788 71.0913 11.0916 71.0913 12C71.0913 12.9561 71.2825 13.7211 71.6172 14.3426C71.9518 14.9641 72.4299 15.49 72.9558 15.8247C73.5295 16.1593 74.151 16.3506 74.7725 16.3506C75.5375 16.3506 76.2546 16.1593 76.8283 15.7768C76.9717 15.6812 77.0674 15.5856 77.163 15.49C78.0713 14.6294 79.171 14.1035 80.414 14.1035H80.7965C80.5096 15.4422 79.8403 16.5418 78.7407 17.4023C77.6411 18.3107 76.3502 18.6932 74.7725 18.6932Z"
+                fill="#403D39" />
+              <path d="M82.6611 18.4064V0.0478516C84.1432 0.0478516 85.3862 1.24307 85.3862 2.77295V18.4064H82.6611Z"
+                fill="#403D39" />
+              <path
+                d="M93.7052 18.6932C92.51 18.6932 91.4104 18.4063 90.4542 17.8804C89.498 17.3067 88.7331 16.5418 88.1594 15.5378C87.5857 14.5338 87.2988 13.3864 87.2988 12.0478C87.2988 10.7091 87.5857 9.56171 88.1594 8.55772C88.7331 7.55374 89.498 6.7888 90.4542 6.21509C91.4104 5.64139 92.51 5.40234 93.7052 5.40234C94.9004 5.40234 96 5.6892 96.9562 6.21509C97.9124 6.7888 98.6773 7.55374 99.251 8.55772C99.8247 9.56171 100.112 10.7091 100.112 12.0478C100.112 13.3864 99.8247 14.5338 99.251 15.5378C98.6773 16.5418 97.9124 17.3067 96.9562 17.8804C96 18.4541 94.9004 18.6932 93.7052 18.6932ZM93.7052 16.3984C94.3745 16.3984 94.9482 16.2549 95.5219 15.9203C96.0956 15.5856 96.5259 15.1075 96.8606 14.486C97.1952 13.8645 97.3865 13.0517 97.3865 12.0956C97.3865 11.1394 97.243 10.3266 96.9084 9.70513C96.5737 9.08362 96.1434 8.60553 95.5697 8.27087C94.996 7.93621 94.4223 7.79278 93.753 7.79278C93.0837 7.79278 92.51 7.93621 91.9363 8.27087C91.3626 8.60553 90.9323 9.08362 90.5976 9.70513C90.263 10.3266 90.0717 11.1394 90.0717 12.0956C90.0717 13.0517 90.263 13.8645 90.5976 14.486C90.9323 15.1075 91.3626 15.5856 91.9363 15.9203C92.4622 16.2071 93.0359 16.3984 93.7052 16.3984Z"
+                fill="#403D39" />
+              <path
+                d="M108 18.6932C106.757 18.6932 105.657 18.4063 104.653 17.8326C103.697 17.2589 102.932 16.494 102.359 15.49C101.785 14.486 101.546 13.3386 101.546 12.0478C101.546 10.7569 101.833 9.60952 102.359 8.60553C102.932 7.60155 103.697 6.83661 104.653 6.2629C105.61 5.6892 106.757 5.40234 108 5.40234C109.578 5.40234 110.869 5.83262 111.92 6.64537C112.972 7.45812 113.689 8.55772 113.976 9.94418H113.594C112.398 9.94418 111.251 9.41828 110.391 8.60553C110.295 8.50991 110.151 8.4143 110.056 8.31868C109.482 7.93621 108.813 7.74497 108 7.74497C107.331 7.74497 106.709 7.8884 106.183 8.22306C105.61 8.55772 105.179 9.03581 104.845 9.65732C104.51 10.2788 104.319 11.0916 104.319 12C104.319 12.9561 104.51 13.7211 104.845 14.3426C105.179 14.9641 105.657 15.49 106.183 15.8247C106.757 16.1593 107.379 16.3506 108 16.3506C108.765 16.3506 109.482 16.1593 110.056 15.7768C110.199 15.6812 110.295 15.5856 110.391 15.49C111.299 14.6294 112.398 14.1035 113.642 14.1035H114.024C113.737 15.4422 113.068 16.5418 111.968 17.4023C110.916 18.3107 109.578 18.6932 108 18.6932Z"
+                fill="#403D39" />
+              <path
+                d="M115.937 18.4064V0.0478516C117.419 0.0478516 118.662 1.24307 118.662 2.77295V10.9961L123.49 5.7849H126.741L121.339 11.522L127.506 18.4542H124.112L118.662 12V18.4542H115.937V18.4064Z"
+                fill="#403D39" />
+            </svg>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ng-container *ngIf="!isMobile" class="w-50">
+            <ng-container *ngIf="!isLoggedIn.value; else elseTemplate">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-lg-3 d-flex align-items-center">
+                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
+                      <option value="en" >English</option>
+                      <option value="es">Spanish</option>
+                    </select> -->
+
+
+                    <div class="dropdown languageDropdown">
+                      <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex align-items-center gap-3">
+                          <img [src]="selectedLanguage === 'en' ? 'assets/images/England-flag.png' : 'assets/images/Spain-Flag.png'" alt="Flag" />
+                          <span>{{ selectedLanguage === 'en' ? 'English' : 'Español' }}</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M16.8 9.60002L12 14.4L7.20005 9.60002" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li [class.active]="selectedLanguage === 'en'" (click)="selectLang('en')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/England-flag.png" alt="" />
+                            English
+                          </div>
+                        </li>
+                        <li [class.active]="selectedLanguage === 'es'" (click)="selectLang('es')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/Spain-Flag.png" alt="" />
+                            Español
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+
+                  </li>
+                  <li class="nav-item me-lg-4" (click)="ShowLogin()" id="login-toggle">
+                    <!-- <a class="nav-link active" aria-current="page" href="#">Log in</a> -->
+                    <a class="nav-link active" aria-current="page" href="#">{{ 'nav.login' | translate }}</a>
+                  </li>
+
+                  <li class="nav-item me-lg-3" (click)="ShowSignup()" id="sign-up-toggle">
+                    <!-- <a class="nav-link" href="#">Sign up</a> -->
+                    <a class="nav-link" href="#">{{ 'nav.signup' | translate }}</a>
+                  </li>
+                  <li class="nav-item ms-lg-5" (click)="scrollToId('elId')">
+                    <a class="nav-link" href="#">{{ 'nav.tryBeforeBuy' | translate }}</a>
+                  </li>
+                </ul>
+              </div>
+            </ng-container>
+          </ng-container>
+          <ng-template #elseTemplate>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="trial">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="componentscurrentUrl !== '/checkout'">
+                <span *ngIf="paymentDone()">
+                  <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl=='/'">
+                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
+                      <option value="en">English</option>
+                      <option value="es">Spanish</option>
+                    </select> -->
+
+                    <div class="dropdown languageDropdown">
+                      <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex align-items-center gap-3">
+                          <img [src]="selectedLanguage === 'en' ? 'assets/images/England-flag.png' : 'assets/images/Spain-Flag.png'" alt="Flag" />
+                          <span>{{ selectedLanguage === 'en' ? 'English' : 'Español' }}</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M16.8 9.60002L12 14.4L7.20005 9.60002" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li [class.active]="selectedLanguage === 'en'" (click)="selectLang('en')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/England-flag.png" alt="" />
+                            English
+                          </div>
+                        </li>
+                        <li [class.active]="selectedLanguage === 'es'" (click)="selectLang('es')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/Spain-Flag.png" alt="" />
+                            Español
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl!=='/'">
+                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
+                      <option value="en">English</option>
+                      <option value="es">Spanish</option>
+                    </select> -->
+                    <div class="dropdown languageDropdown">
+                      <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="d-flex align-items-center gap-3">
+                          <img [src]="selectedLanguage === 'en' ? 'assets/images/England-flag.png' : 'assets/images/Spain-Flag.png'" alt="Flag" />
+                          <span>{{ selectedLanguage === 'en' ? 'English' : 'Español' }}</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                          <path d="M16.8 9.60002L12 14.4L7.20005 9.60002" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li [class.active]="selectedLanguage === 'en'" (click)="selectLang('en')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/England-flag.png" alt="" />
+                            English
+                          </div>
+                        </li>
+                        <li [class.active]="selectedLanguage === 'es'" (click)="selectLang('es')">
+                          <div class="d-flex align-items-center gap-3">
+                            <img src="assets/images/Spain-Flag.png" alt="" />
+                            Español
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item me-lg-3" *ngIf="user">
+                    <a class="nav-link" (click)="goToDashboard()">{{ 'nav.goToDashboard' | translate }}</a>
+                  </li>
+                </span>
+                <li class="nav-item me-lg-3" *ngIf="user">
+                  <a class="nav-link" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl=='/'">{{ 'nav.helloUser'
+                    | translate:{name: user.value.name} }}</a>
+                  <!-- <a class="nav-link" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl=='/'">{{ 'nav.goToDashboard', {{user.value.name}} | translate }}</a> -->
+                  <a class="nav-link" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl!=='/'">{{
+                    'nav.helloUser' | translate:{name: user.value.name} }}</a>
+                </li>
+                <li class="nav-item ms-lg-5" (click)="scrollToId('elId')">
+                  <a class="nav-link" (click)=logout() *ngIf="componentscurrentUrl=='/'">{{ 'nav.logout' | translate
+                    }}</a>
+                  <a class="nav-link" (click)=logout() *ngIf="componentscurrentUrl!=='/' && !trial">{{ 'nav.logout' |
+                    translate }}</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!trial">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="componentscurrentUrl !== '/checkout'">
+                <span *ngIf="paymentDone()">
+
+
+
+                  <li class="nav-item me-lg-3" *ngIf="user">
+                    <a class="nav-link" (click)="goToDashboard()">{{ 'nav.goToDashboard' | translate }}</a>
+                  </li>
+                </span>
+
+
+                <li class="nav-item me-lg-3 d-flex align-items-center darkSelect" *ngIf="componentscurrentUrl!=='/'">
+                  <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                  </select> -->
+                  <div class="dropdown languageDropdown">
+                    <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="d-flex align-items-center gap-3">
+                        <img [src]="selectedLanguage === 'en' ? 'assets/images/England-flag.png' : 'assets/images/Spain-Flag.png'" alt="Flag" />
+                        <span>{{ selectedLanguage === 'en' ? 'English' : 'Español' }}</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.8 9.60002L12 14.4L7.20005 9.60002" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li [class.active]="selectedLanguage === 'en'" (click)="selectLang('en')">
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="assets/images/England-flag.png" alt="" />
+                          English
+                        </div>
+                      </li>
+                      <li [class.active]="selectedLanguage === 'es'" (click)="selectLang('es')">
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="assets/images/Spain-Flag.png" alt="" />
+                          Español
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl=='/'">
+                  <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                  </select> -->
+                  <div class="dropdown languageDropdown">
+                    <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="d-flex align-items-center gap-3">
+                        <img [src]="selectedLanguage === 'en' ? 'assets/images/England-flag.png' : 'assets/images/Spain-Flag.png'" alt="Flag" />
+                        <span>{{ selectedLanguage === 'en' ? 'English' : 'Español' }}</span>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M16.8 9.60002L12 14.4L7.20005 9.60002" stroke="white" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li [class.active]="selectedLanguage === 'en'" (click)="selectLang('en')">
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="assets/images/England-flag.png" alt="" />
+                          English
+                        </div>
+                      </li>
+                      <li [class.active]="selectedLanguage === 'es'" (click)="selectLang('es')">
+                        <div class="d-flex align-items-center gap-3">
+                          <img src="assets/images/Spain-Flag.png" alt="" />
+                          Español
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+
+
+                <li class="nav-item me-lg-3" *ngIf="user">
+                  <!-- <a class="nav-link" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl=='/'">Hello, {{user.value.name}}</a> -->
+                  <a class="nav-link " [routerLink]="['/profile']">{{ 'nav.helloUser' | translate:{name: user.value.name}
+                    }}</a>
+                  <a class="nav-link dark" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl!=='/'">{{
+                    'nav.helloUser' | translate:{name: user.value.name} }}</a>
+                </li>
+                <li class="nav-item ms-lg-5" (click)="scrollToId('elId')">
+                  <a class="nav-link" (click)=logout() *ngIf="componentscurrentUrl=='/'">{{ 'nav.logout' | translate
+                    }}</a>
+                  <a class="nav-link dark" (click)=logout() *ngIf="componentscurrentUrl!=='/' && trial">{{ 'nav.logout'
+                    | translate }}</a>
+
+                </li>
+
+              </ul>
+            </div>
+
+          </ng-template>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<app-login (editedEmitter)="updateValueFromLogin($event)" [isShow]="isShowLogin"></app-login>
+<app-signup (editedEmitter)="updateValueSignup($event)" [isShow]="isShowSignup"></app-signup>

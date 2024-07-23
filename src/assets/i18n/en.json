@@ -1,0 +1,220 @@
+{
+
+  "banner": {
+      "title": "Your face will let you in to places.",
+      "description": "Facial recognition based attendance system for your workforce."
+    },
+    "fast_accurate": {
+      "title": "Fast, accurate, error-free facial recognition and attendance.",
+      "description": "It takes a mere 5 seconds to identify a person and clock them in! Pair your phone with the location device, clock in, and begin your day."
+    },
+    "real_time": {
+      "title": "Real-time updates to the managers.",
+      "description": "Stay informed about your personnel and their arrival at your locations."
+    },
+    "ensure": {
+      "title": "Ensure authentic and verified attendance.",
+      "description": "Validate clock-in and attendance by means of simple selfies, and reduce the risk of proxy clock-ins."
+    },
+    "find_plan": {
+      "title": "Find the right plan for your company.",
+      "description": "Move away from access cards and fingerprint scanners, and towards our AI powered access system.",
+      "monthly": {
+        "title": "Monthly",
+        "try_free": "Try free for 1 month",
+        "users": "user",
+        "location": "location",
+        "price": "employee / month",
+        "buy_now": "Buy Now",
+        "upgrade_plan": "Upgrade Plan"
+      },
+      "yearly": {
+        "title": "Yearly",
+        "most_popular": "Most popular",
+        "users": "user",
+        "location": "location",
+        "price": "employee / month",
+        "buy_now": "Buy Now",
+        "upgrade_plan": "Upgrade Plan"
+      }
+    },
+    "nav": {       
+        "login": "Log in",
+        "signup": "Sign up",
+        "tryBeforeBuy": "I want to try before I buy",
+        "helloUser": "Hello,{{name}}",
+        "logout": "Logout",
+        "goToDashboard": "Go to Dashboard"
+      },
+      "footer": {
+        "heading": "Contactless. Secure. Accurate.",
+        "buttons": {
+          "contactUs": "Contact Us",
+          "getApp": "Get the app"
+        }
+      },
+     "login": {
+  "heading": "Log in to your account.",
+  "emailLabel": "Email",
+  "emailPlaceholder": "Enter your email address",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "Enter your password",
+  "loginButton": "Log in",
+  "invalidEmailMessage": "Email is required",
+  "invalidEmailFormatMessage": "Email must be valid",
+  "invalidPasswordMessage": "Password is required",
+  "registerPrompt": "Not registered yet?",
+  "signupLink": "Sign up here"
+},
+      "signup": {
+        "sign_up_page_title":"Secure. Contactless.Accurate.",
+        "heading": "Create your account",
+        "firstNameLabel": "First name",
+        "firstNamePlaceholder": "John",
+        "lastNameLabel": "Last name",
+        "lastNamePlaceholder": "Galt",
+        "companyNameLabel": "Company name",
+        "companyNamePlaceholder": "Company Name",
+        "emailLabel": "E-mail",
+        "emailPlaceholder": "Email",
+        "passwordLabel": "Password",
+        "passwordPlaceholder": "Minimum 8 characters",
+        "passwordRequirements": "A strong password is 8-16 characters long and includes at least one number, one letter and a special character.",
+        "confirmPasswordLabel": "Re-enter password",
+        "confirmPasswordPlaceholder": "Minimum 8 characters",
+        "signupButton": "Sign me up",
+        "invalidFirstNameMessage": "First Name is required",
+        "invalidLastNameMessage": "Last Name is required",
+        "invalidCompanyNameMessage": "Company Name is required",
+        "invalidEmailMessage": "Email is required",
+        "invalidEmailFormatMessage": "Email must be valid",
+        "invalidPasswordMessage": "Password is required",
+        "invalidPasswordPatternMessage": "Password must be valid",
+        "invalidConfirmPasswordMessage": "Confirm Password is required",
+        "invalidConfirmPasswordPatternMessage": "Confirm Password must be valid",
+        "passwordsMustMatchMessage": "Password must match"
+      },
+      "contactUs": {
+    "heading": "We’d love to hear from you.",
+    "email": "info@brainyclock.com",
+    "address": "251 East 32nd Street\n7C\nNYC, NY 10016\nUnited States",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "Email address",
+        "messagePlaceholder": "Message",
+        "organizationPlaceholder": "Organization name",
+        "invalidNameMessage": "Name is required",
+        "invalidEmailMessage": "Email is required",
+        "invalidEmailFormatMessage": "Email must be valid",
+        "invalidOrganizationMessage": "Organization is required",
+        "invalidMessage": "Message is required",
+        "submitButton": "Send"
+  },
+  "getApp": {
+    "title":"Get the app",
+    "androidText": "Got an Android device?",
+    "androidButton": "Get it on Google Play",
+    "iosText": "Got an iOS device?",
+    "iosButton": "Get it on Apple Store",
+    "noteText": "Note:",
+    "noteMessage": "The tablet application is currently available only on iPad OS."
+  },
+  "subscriptionDetails": {
+    "mySubscriptions":"My subscriptions",
+    "subscriptionDetails":"Subscription details",
+    "dateofpurchase":"Date of purchase",
+    "validTill":"Valid till",
+    "invoiceHistory":"Invoice history",
+    "paid":"paid",
+    "unpaid":"unpaid",
+    "downloadReceipt":"Download receipt",
+    "monthlyPlanTitle":"Monthly plan",
+    "yearlyPlanTitle":"Yearly plan",
+    "activeStatus": "Active",
+    "inActiveStatus": "Inctive",
+    "monthlyPlan":"Monthly",
+    "yearlyPlan":"Yearly"
+  },
+  "Paymentdetails":{
+  "title":"Payment details",
+  "Savedcreditcards":"Saved credit cards",
+  "visaLabel":"Visa ending in 2635",
+  "PaypalIDlebal":"Paypal ID",
+  "paypalEmailPlaceholder":"samantha72@outlook.com"
+   },
+  "changePassword": {
+    "title": "Change Password",
+    "currentPasswordLabel": "Enter Current Password",
+    "currentPasswordPlaceholder": "Type in your password",
+    "newPasswordLabel": "Enter new password",
+    "newPasswordPlaceholder": "New password",
+    "confirmPasswordLabel": "Re-enter password",
+    "confirmPasswordPlaceholder": "Confirm password",
+    "invalidCurrentPasswordMessage": {
+      "required": "Current Password is required",
+      "pattern": "Current Password must be valid"
+    },
+    "invalidNewPasswordMessage": {
+      "required": "New Password is required",
+      "pattern": "New Password must be valid"
+    },
+    "invalidConfirmPasswordMessage": {
+      "required": "Confirm Password is required",
+      "pattern": "Confirm Password must be valid",
+      "mustMatch": "Passwords must match"
+    },
+    "passwordRequirements": "A strong password is 8-16 characters long and includes at least one number, one letter, and a special character.",
+    "resetPasswordButton": "Reset password"
+  },
+
+
+  "checkout": {
+    "paymentDetails":"Payment details",
+    "creditCard":"Credit Card",
+    "stripe":"Stripe",
+    "nameOnCard":"Name on the card",
+    "namePlaceholder":"Samantha Williams",
+    "cardPlaceholder":"Card Number",
+    "expiryPlaceholder":"Expiry",
+    "CVVplaceholder":"CVV",
+    "billingAddress":"Billing address",
+    "addressPlaceholder":"Street address",
+    "cityPlaceholder":"City",
+    "statePlaceholder":"State",
+    "zipCodePlaceHolder":"ZipCode",
+    "orderSummary":"Order Summary",
+    "addMoreEmployees":"Add more employees",
+    "yearlySubscriptionPlan":"Yearly subscription plan",
+    "monthlySubscriptionPlan":"Monthly subscription plan",
+    "monthlyPrice":"$3 / employee / month",
+    "yearlyPrice":"$2.5 / employee / month",
+    "dateOfPurchase":"Date of purchase",
+    "freeTrialUntil :":" Free trial until :",
+    "subscriptionValidTill":"Subscription valid till",
+    "Total":"Total",
+    "makePayment":"Make Payment",
+    "cancelTransation":"Cancel transation",
+    "trailSuscription":"You have opted for a free trial of our Enterprise subscription.",
+"trailSuscriptionend":"Paid subscription starts when the trial ends, unless you cancel by 11 November 2022.",
+"trailCredit":"Credit card is required for future billing.",
+"trailFeactures":"Trial includes the same features as the paid product."
+  },
+  "subscriptionSuccess": {
+    "trialSuccessHeader": "Enjoy the next 30 days of your free trial!",
+    "purchaseSuccessHeader": "Your purchase has been completed successfully!",
+    "confirmationEmailText": "A confirmation mail will be sent on your registered email ID. For any queries, write to us at",
+    "trialEndWarning": "Paid subscription starts when the trial ends, unless you cancel by 11th November 2022.",
+    "orderSummaryHeader": "Order summary",
+    "summaryItems": {
+      "subscription": "Subscription",
+      "orderTotal": "Order total",
+      "orderNumber": "Order number",
+      "paymentMethod": "Payment method",
+      "dateOfPurchase": "Date of purchase",
+      "subscriptionValidTill": "Subscription valid till"
+    },
+    "goToDashboardButton": "Go to dashboard",
+    "paymentMethodValue": "Credit card"
+  }
+
+  }
+  

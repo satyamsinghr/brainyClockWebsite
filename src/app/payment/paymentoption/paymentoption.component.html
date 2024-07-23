@@ -1,0 +1,149 @@
+<div class="main-bg-containerr">
+  <form [formGroup]="paymentForm" (ngSubmit)="makePayment()">
+    <div class="payment-sec-body">
+      <div class="payment-selection">
+        <div class="pay-details-heading">
+          Payment details
+        </div>
+        <div class="payment-selection-box">
+          <div class="payment-boxess">
+            Credit card
+          </div>
+          <div class="payment-boxess" (click)="makePaymentByStripe()">
+            Stripe
+          </div>
+        </div>
+        <div class="input-type-name">
+          <div class="name-on-card">Name on the card</div>
+          <input formControlName="nameOnCard" type="text" placeholder="" />
+          <div class="master-visa-card">
+            <img src="assets/images/visa_icon.png" alt="">&#160; <img src="assets/images/mastercard.png" alt="">
+          </div>
+        </div>
+        <div class="three-input-container">
+          <div class="input-card-number">
+            <img src="assets/images/card.png" alt="">&#160;&#160;
+            <input formControlName="cardNumber" type="text" placeholder="Card number" class="card-number-field"
+              (keydown)="onCardNumberKey($event)" (keypress)="numberOnly($event)" />
+          </div>
+          <input formControlName="expiry" type="text" placeholder="Expiry" class="expiry-field text-center"
+            (keydown)="onKey($event)" />
+          <input formControlName="cvv" type="text" placeholder="CVV" class="cvv-field" maxlength="3"
+            (keypress)="numberOnly($event)" />
+        </div>
+
+        <div class="toggle-btn-box d-flex gap-3">
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+          <!-- <div class="on-off-btn-box">
+            <div class="on-off-btn dot" id="dot">
+              <div class="on-off-dot toggle-btnn" id="toggle-btnn">&#160;</div>
+
+            </div>
+          </div> -->
+          <div>
+            Save this card for future billing.
+          </div>
+        </div>
+        <address class="address-section">
+          <div class="address-heading">
+            Billing address
+          </div>
+          <div class="row-address   d-flex justify-content-between flex-wrap">
+            <input formControlName="streetAddress" type="text" placeholder="Street address" class="on-mbl-full" />
+            <input formControlName="city" type="text" placeholder="City" class="on-mbl-full" />
+          </div>
+          <div class="row-address d-flex justify-content-between">
+            <input formControlName="state" placeholder="State/Province">
+            <input formControlName="zipCode" placeholder="Zip code">
+          </div>
+        </address>
+        <div class="cancel-payment-mbl">
+          <div (click)="cancelTransaction()" class="cancell">
+            Cancel transaction
+          </div>
+          <button type="submit" class="make-payment">
+            Make payment
+          </button>
+        </div>
+
+      </div>
+      <div class="plan-box">
+        <div class="flex-box-column">
+          <div class="enterprise-plan-box relative">
+            <div class="enterprise-shadow">
+              <div class="text-container relative text-white w-full">
+                <div style="margin-bottom: 30px;">
+                  {{packageService.getPackageName(packageService.packageType.value)}} plan
+                </div>
+
+                <div class="user-employ-location">
+                  <div>{{packageService.get(packageService.packageType.value).users}} user</div> <br>
+                  <div>{{packageService.get(packageService.packageType.value).employees}} employees</div> <br>
+                  <div>{{packageService.get(packageService.packageType.value).location}} location</div> <br> <br>
+                </div>
+
+                <div class="para-about-plan">
+                  Get a feel for the product with the Free plan, and when you are ready, simply upgrade your
+                  subscription
+                  with one of the available plans.
+                </div>
+              </div>
+            </div>
+            <div class="frontBox-shadow absolute"></div>
+          </div>
+          <div class="cancel-payment">
+            <button (click)="cancelTransaction()" class="order_btn prev-page-btn pmt_btn"
+              style="padding-left:0px !important;">
+              Cancel transaction
+            </button>
+
+            <button type="submit" class="order_btn payment_btn pmt_btn">
+              Make payment
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <div class="paymentSuccesfull" *ngIf="ispaymentSuccessfull">
+    <div class="payment-succesfull-heading">
+      <h2>Your purchase has been</h2>
+      <h2>Completed successfully!</h2>
+    </div>
+    <div class="sucess-message">
+      <p>A confirmation mail will be sent on your registered email ID for any queries.</p>
+      <p>write to us at <span>info@binaryClock.com</span></p>
+    </div>
+    <div class="orderSummary">
+      <div class="summaryHeaderWrapper d-flex">
+        <div class="orderHeading">
+          <h3>Order Summary</h3>
+        </div>
+        <div class="orderDetails">View Details</div>
+      </div>
+      <div class="orderDetailTableWrapper">
+        <table class="orderDetailTable">
+          <tr>
+            <td>Order total:</td>
+            <td>$1299</td>
+          </tr>
+          <tr>
+            <td>Order number</td>
+            <td>12145</td>
+          </tr>
+          <tr>
+            <td>Billing Method:</td>
+            <td>Credit Card</td>
+          </tr>
+          <tr>
+            <td>Billing Type</td>
+            <td>Annual Description</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

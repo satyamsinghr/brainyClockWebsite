@@ -1,0 +1,96 @@
+<!-- <div class="container get-the-app-container">
+  <div class="row">
+      <div class="col-lg-6 col-12">
+          <div class="main-get-app">
+              <div>
+                  <h2 class="headderrr">Get the app</h2>
+              </div>
+              <div class="headerr-1">
+                  <div class="got">
+                      <p class="android">Got an Android device?</p>
+                      <div>
+                          <a >
+                              <span class="apple line">Get it on Google Play</span>
+                              <span><img class="vector" src="assets/images/arrow.png" alt="" ></span>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="ios">
+                      <p class="android">Got an iOS device?</p>
+                      <a >
+                          <span class="apple line">Get it on Apple Store</span>
+                      <span><img class="vector" src="assets/images/arrow.png" alt=""></span>
+                      </a>
+                  </div>
+
+                  <div class="tablet">
+                      <p class="notte">Note:</p>
+                      <p class="ipad">The tablet application is currently <br> available only on iPad OS.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-6 col-12">
+          <div >
+              <div class="bg-app">
+              <img class="phon11" src="assets/images/Phone_1 1.png" alt="" width="57%">
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="mobile-notte">
+      <p class="notte">Note:</p>
+      <p class="ipad">The tablet application is currently <br> available only on iPad OS.</p>
+  </div>
+</div> -->
+
+
+
+<div class="container get-the-app-container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="main-get-app">
+          <div>
+            <h2 class="headderrr">{{ 'getApp.title' | translate }}</h2>
+          </div>
+          <div class="headerr-1">
+            <div class="got">
+              <p class="android">{{ 'getApp.androidText' | translate }}</p>
+              <div>
+                <a (click)="goToGoogleplayStore()">
+                  <span class="apple line">{{ 'getApp.androidButton' | translate }}</span>
+                  <span><img class="vector" src="assets/images/arrow.png" alt=""></span>
+                </a>
+              </div>
+            </div>
+  
+            <div class="ios">
+              <p class="android">{{ 'getApp.iosText' | translate }}</p>
+              <a (click)="goToAppleStore()">
+                <span class="apple line">{{ 'getApp.iosButton' | translate }}</span>
+                <span><img class="vector" src="assets/images/arrow.png" alt=""></span>
+              </a>
+            </div>
+  
+            <div class="tablet">
+              <p class="notte">{{ 'getApp.noteText' | translate }}</p>
+              <p class="ipad">{{ 'getApp.noteMessage' | translate }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div>
+          <div class="bg-app">
+            <img class="phon11" src="assets/images/Phone_1 1.png" alt="" width="57%">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-notte">
+      <p class="notte">{{ 'getApp.noteText' | translate }}</p>
+      <p class="ipad">{{ 'getApp.noteMessage' | translate }}</p>
+    </div>
+  </div>
+  

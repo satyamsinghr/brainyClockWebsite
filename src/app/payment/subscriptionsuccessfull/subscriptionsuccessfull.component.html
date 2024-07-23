@@ -1,0 +1,89 @@
+<section class="order_detail_sec ps-lg-5">
+  <div class="container-fluid ps-lg-3 pe-0">
+    <div class="row me-0 flex-lg-row flex-md-row flex-column-reverse">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="order_detail order_detail_outer" >
+          <h2 class="mb-4" *ngIf="!trial">{{ 'subscriptionSuccess.purchaseSuccessHeader' | translate }}</h2>
+          <h2 class="mb-4" *ngIf="trial">{{ 'subscriptionSuccess.trialSuccessHeader' | translate }}</h2>
+          <div class="row">
+            <div class="col-lg-10 col-md-12 col-12">
+              <p class="m-0"> {{ 'subscriptionSuccess.confirmationEmailText' | translate }}
+                 <u href="mailto:info@brainyclock.com">{{userEmail.email}}</u>
+              </div>
+              <div class="col-lg-8 col-md-12 col-12">
+                <p class="m-0" *ngIf="packageService.isTrial.value">
+                  {{ 'subscriptionSuccess.trialEndWarning' | translate }}</p>
+              </div>
+            </div>
+            <div class="row pt-lg-4 pt-3">
+              <div class="col-lg-8 col-md-12 col-12">
+                <div
+                  class="order_detail d-flex align-items-center justify-content-between">
+                  <h4>{{ 'subscriptionSuccess.orderSummaryHeader' | translate }}</h4>
+                </div>
+              </div>
+            </div>
+            <div class="subscription_summary mt-4">
+              <ul>
+                <li>
+                  <span>
+                    {{ 'subscriptionSuccess.summaryItems.subscription' | translate }}:
+                  </span>
+                  <span>
+                    <b>{{subscriptionPlan}}</b>
+                  </span>
+                </li>
+                <li>
+                  <span>{{ 'subscriptionSuccess.summaryItems.orderTotal' | translate }}:
+                  </span>
+                  <span>
+                    <b>${{userAmmount}}</b>
+                  </span>
+                </li>
+                <li>
+                  <span>{{ 'subscriptionSuccess.summaryItems.orderNumber' | translate }}:</span>
+                  <span>
+                    <b>{{orderNo}}</b>
+                  </span>
+                </li>
+                <li>
+                  <span>Payment method :</span>
+                  <span>
+                    <b>Credit card</b>
+                  </span>
+                </li>
+                <li>
+                  <span>Date of purchase :</span>
+                  <span>
+                    <b>{{packageService.dateOfPurchase() | date: 'dd MMMM yyyy' }}</b>
+                  </span>
+                </li>
+                <li>
+                  <span>Subscription valid till :</span>
+                  <span>
+                    <b>{{packageService.subscriptionValidTill(packageService.packageType.value)| date: 'dd MMMM yyyy'
+                    }}</b>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-lg-7 col-md-7 col-sm-12 col-12 mt-lg-4 mt-md-4 mt-4 pt-lg-2 pe-lg-4">
+              <div class="go_back">
+                <button class="btn btn-primary" (click)="backToHome()">{{ 'subscriptionSuccess.goToDashboardButton' | translate }}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 px-0 d-lg-block">
+          <div class="detail_img d-flex align-items-center justify-content-start position-relative" *ngIf="trial">
+            <img src="assets/images/new-home/Saturn.png" width="100%" alt="">
+          </div>
+          <div class="detail_img detail_plan_img d-flex align-items-center justify-content-start position-relative" *ngIf="!trial">
+            <img src="assets/images/new-home/suscription.png" width="100%" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,191 @@
+/* button.user {
+    background-color: transparent;
+    margin-right: 9px;
+    border-radius: 5px;
+    padding: 1px 4px 1px 5px;
+    border: 1.5px solid #6768AB;
+}
+
+img.rotate-image {
+    transform: rotate(45deg);
+    width: 13px;
+    padding: 1px 1px 1px 1px;
+} */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+header nav {
+    background: transparent;
+    backdrop-filter: blur(0px);
+}
+
+header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+    display: inline-flex;
+    padding: 12px 32px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    color: #FAFAFA !important;
+    cursor: pointer;
+}
+
+header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item a.nav-link.dark {
+    color: #403D39 !important;
+}
+
+header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item select {
+    padding: 0;
+    border: none !important;
+    color: #fff;
+    background-color: transparent !important;
+    outline: none !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item.darkSelect select {
+    color: #403D39 !important;
+}
+
+
+header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item select option {
+    color: #000 !important;
+}
+
+.languageDropdown button.btn.btn-secondary {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    min-width: 256px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 9999;
+}
+
+.languageDropdown button.btn.btn-secondary.show svg,
+.languageDropdown button.btn.btn-secondary.show svg path {
+    stroke: #000;
+    transition: 0.1s;
+    flex: 0 0 auto;
+}
+
+.languageDropdown button.btn.btn-secondary.show svg {
+    transform: rotate(180deg);
+    transition: 0.1s;
+}
+
+.languageDropdown button.btn.btn-secondary.show {
+    background-color: #fff;
+    color: #252422;
+}
+
+.languageDropdown button.btn.btn-secondary img {
+    position: relative;
+    opacity: 1;
+    transition: 0.1s;
+}
+
+.languageDropdown ul.dropdown-menu {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.languageDropdown ul.dropdown-menu li {
+    padding: 4px 16px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.9px;
+    color: #252422;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 16px;
+}
+
+.languageDropdown ul.dropdown-menu li:hover,
+.languageDropdown ul.dropdown-menu li:active,
+.languageDropdown ul.dropdown-menu li:focus,
+.languageDropdown ul.dropdown-menu li.active {
+    background-color: #EB5E28;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+}
+
+/* 
+.languageDropdown  .dropdown-menu {   
+     transform: translate(0px, -200px);
+     display: block !important;
+     opacity: 0;
+    transition-duration: 0.4s !important;
+}
+.languageDropdown  .dropdown-menu.show {
+    transition-duration: 0.4s !important;
+    transform: translate(0px, 0px);opacity: 1;
+} */
+.languageDropdown button.btn.btn-secondary.show img {
+    opacity: 0;
+    transition: 0.1s;
+}
+
+.languageDropdown button.btn.btn-secondary span {
+    transform: translate(0px, 0px);
+    transition: 0.1s;
+}
+
+.languageDropdown button.btn.btn-secondary.show span {
+    transform: translate(-48px, 0px);
+    transition: 0.1s;
+}
+
+.darkSelect .languageDropdown button.btn.btn-secondary {
+    color: #000 !important;
+}
+
+.darkSelect .languageDropdown button.btn.btn-secondary svg path {
+    stroke: #000;
+}
+
+.darkSelect .languageDropdown button.btn.btn-secondary.show {
+    background-color: #EB5E28;
+    color: #fff !important;
+}
+
+.darkSelect .languageDropdown button.btn.btn-secondary.show svg path {
+    stroke: #fff;
+}
+
+@media (max-width:960px) {
+    header nav.navbar .navbar-collapse ul.navbar-nav li.nav-item a.nav-link {
+        padding: 12px 32px;
+    }
+
+    .navbar-collapse {
+        background: #252422;
+        margin-top: 20px;
+    }
+}

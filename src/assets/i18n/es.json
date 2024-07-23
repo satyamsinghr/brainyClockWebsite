@@ -1,0 +1,215 @@
+{
+  "banner": {
+      "title": "Tu cara te permitirá entrar en lugares.",
+      "description": "Sistema de asistencia basado en reconocimiento facial para su fuerza laboral."
+  },
+  "fast_accurate": {
+      "title": "Reconocimiento facial y asistencia rápidos, precisos y sin errores.",
+      "description": "¡Se necesitan solo 5 segundos para identificar a una persona y registrarla! Empareje su teléfono con el dispositivo de ubicación, registre y comience su día."
+  },
+  "real_time": {
+      "title": "Actualizaciones en tiempo real para los gerentes.",
+      "description": "Manténgase informado sobre su personal y su llegada a sus ubicaciones."
+  },
+  "ensure": {
+      "title": "Garantizar una asistencia auténtica y verificada.",
+      "description": "Valide el registro y la asistencia mediante simples selfies y reduzca el riesgo de registros proxy."
+  },
+  "find_plan": {
+      "title": "Encuentre el plan adecuado para su empresa.",
+      "description": "Aléjese de las tarjetas de acceso y los escáneres de huellas dactilares y opte por nuestro sistema de acceso impulsado por IA.",
+      "monthly": {
+          "title": "Mensual",
+          "try_free": "Pruébalo gratis durante 1 mes",
+          "users": "usuario",
+          "location": "ubicación",
+          "price": "empleado / mes",
+          "buy_now": "Comprar ahora",
+          "upgrade_plan": "Plan de actualización"
+      },
+      "yearly": {
+          "title": "Anual",
+          "most_popular": "Más popular",
+          "users": "usuario",
+          "location": "ubicación",
+          "price": "empleado / mes",
+          "buy_now": "Comprar ahora",
+          "upgrade_plan": "Plan de actualización"
+      }
+  },
+  "nav": {
+      "login": "Acceso",
+      "signup": "Inscribirse",
+      "tryBeforeBuy": "quiero probar antes de comprar",
+      "helloUser": "Hola, {{name}}",
+      "logout": "Cerrar sesión",
+      "goToDashboard": "Ir al panel de control"
+  },
+  "footer": {
+      "heading": "Sin contacto. Seguro. Preciso.",
+      "buttons": {
+          "contactUs": "Contáctenos",
+          "getApp": "Obtener la aplicación"
+      }
+  },
+  "login": {
+      "heading": "Ingrese a su cuenta.",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Introduce tu dirección de correo electrónico",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Ingresa tu contraseña",
+      "loginButton": "Acceso",
+      "invalidEmailMessage": "correo electronico es requerido",
+      "invalidEmailFormatMessage": "El email debe ser válido",
+      "invalidPasswordMessage": "se requiere contraseña",
+      "registerPrompt": "Todavía no estas registrado?",
+      "signupLink": "Registrate aquí"
+  },
+  "signup": {
+      "sign_up_page_title": "Seguro. Sin contacto. Preciso.",
+      "heading": "Crea tu cuenta",
+      "firstNameLabel": "Nombre de pila",
+      "firstNamePlaceholder": "John",
+      "lastNameLabel": "Apellido",
+      "lastNamePlaceholder": "Galt",
+      "companyNameLabel": "Nombre de empresa",
+      "companyNamePlaceholder": "nombre de empresa",
+      "emailLabel": "Correo electrónico",
+      "emailPlaceholder": "Correo electrónico",
+      "passwordLabel": "Contraseña",
+      "passwordPlaceholder": "Mínimo 8 caracteres",
+      "passwordRequirements": "Una contraseña segura tiene entre 8 y 16 caracteres e incluye al menos un número, una letra y un carácter especial.",
+      "confirmPasswordLabel": "Escriba la contraseña otra vez",
+      "confirmPasswordPlaceholder": "Mínimo 8 caracteres",
+      "signupButton": "Inscríbeme",
+      "invalidFirstNameMessage": "Se requiere el primer nombre",
+      "invalidLastNameMessage": "El apellido es obligatorio",
+      "invalidCompanyNameMessage": "El nombre de la empresa es obligatorio",
+      "invalidEmailMessage": "correo electronico es requerido",
+      "invalidEmailFormatMessage": "El email debe ser válido",
+      "invalidPasswordMessage": "se requiere contraseña",
+      "invalidPasswordPatternMessage": "La contraseña debe ser válida",
+      "invalidConfirmPasswordMessage": "Confirmar Se requiere contraseña",
+      "invalidConfirmPasswordPatternMessage": "Confirmar La contraseña debe ser válida",
+      "passwordsMustMatchMessage": "Contraseña debe coincidir con"
+  },
+  "contactUs": {
+      "heading": "Nos encantaría saber de usted.",
+      "email": "info@brainyclock.com",
+      "address": "251 este de la calle 32\n7C\nNueva York, Nueva York 10016\nEstados Unidos",
+      "namePlaceholder": "Su nombre",
+      "emailPlaceholder": "Dirección de correo electrónico",
+      "messagePlaceholder": "Mensaje",
+      "organizationPlaceholder": "Nombre de la Organización",
+      "invalidNameMessage": "Se requiere el nombre",
+      "invalidEmailMessage": "correo electronico es requerido",
+      "invalidEmailFormatMessage": "El email debe ser válido",
+      "invalidOrganizationMessage": "Se requiere organización",
+      "invalidMessage": "Se requiere mensaje",
+      "submitButton": "Enviar"
+  },
+  "getApp": {
+      "title": "Obtener la aplicación",
+      "androidText": "¿Tienes un dispositivo Android?",
+      "androidButton": "Consiguelo en google play",
+      "iosText": "¿Tienes un dispositivo iOS?",
+      "iosButton": "Consíguelo en Apple Store",
+      "noteText": "Nota:",
+      "noteMessage": "Actualmente, la aplicación para tableta solo está disponible en iPad OS."
+  },
+  "subscriptionDetails": {
+      "mySubscriptions": "Mis Suscripciónes",
+      "subscriptionDetails": "Detalles de suscripción",
+      "dateofpurchase": "Fecha de compra",
+      "validTill": "Válida hasta",
+      "invoiceHistory": "Historial de facturas",
+      "paid": "pagado",
+      "unpaid": "no pagado",
+      "downloadReceipt": "Descargar recibo",
+      "monthlyPlanTitle": "Plan mensual",
+      "yearlyPlanTitle": "plan anual",
+      "activeStatus": "Activo",
+      "inActiveStatus": "intivo",
+      "monthlyPlan": "Mensual",
+      "yearlyPlan": "Anual"
+  },
+  "Paymentdetails": {
+      "title": "Detalles del pago",
+      "Savedcreditcards": "Tarjetas de crédito guardadas",
+      "visaLabel": "Visa que termina en 2635",
+      "PaypalIDlebal": "identificación de paypal",
+      "paypalEmailPlaceholder": "samantha72@outlook.com"
+  },
+  "changePassword": {
+      "title": "Cambiar la contraseña",
+      "currentPasswordLabel": "Introducir la contraseña actual",
+      "currentPasswordPlaceholder": "Escribe tu contraseña",
+      "newPasswordLabel": "Ingrese nueva clave",
+      "newPasswordPlaceholder": "Nueva contraseña",
+      "confirmPasswordLabel": "Escriba la contraseña otra vez",
+      "confirmPasswordPlaceholder": "Confirmar Contraseña",
+      "invalidCurrentPasswordMessage": {
+          "required": "Se requiere contraseña actual",
+          "pattern": "La contraseña actual debe ser válida"
+      },
+      "invalidNewPasswordMessage": {
+          "required": "Se requiere nueva contraseña",
+          "pattern": "La nueva contraseña debe ser válida"
+      },
+      "invalidConfirmPasswordMessage": {
+          "required": "Confirmar Se requiere contraseña",
+          "pattern": "Confirmar La contraseña debe ser válida",
+          "mustMatch": "Las contraseñas deben coincidir"
+      },
+      "passwordRequirements": "Una contraseña segura tiene entre 8 y 16 caracteres e incluye al menos un número, una letra y un carácter especial.",
+      "resetPasswordButton": "Restablecer la contraseña"
+  },
+  "checkout": {
+      "paymentDetails": "Detalles del pago",
+      "creditCard": "Tarjeta de crédito",
+      "stripe": "Raya",
+      "nameOnCard": "Nombre en la Tarjeta",
+      "namePlaceholder": "Samanta Williams",
+      "cardPlaceholder": "Número de tarjeta",
+      "expiryPlaceholder": "Expiración",
+      "CVVplaceholder": "CVV",
+      "billingAddress": "Dirección de Envio",
+      "addressPlaceholder": "Dirección",
+      "cityPlaceholder": "Ciudad",
+      "statePlaceholder": "Estado",
+      "zipCodePlaceHolder": "Código postal",
+      "orderSummary": "Resumen del pedido",
+      "addMoreEmployees": "Agregar más empleados",
+      "yearlySubscriptionPlan": "Plan de suscripción anual",
+      "monthlySubscriptionPlan": "Plan de suscripción mensual",
+      "monthlyPrice": "$3 / empleado / mes",
+      "yearlyPrice": "$2.5 / empleado / mes",
+      "dateOfPurchase": "Fecha de compra",
+      "freeTrialUntil :": " Prueba gratuita hasta:",
+      "subscriptionValidTill": "Suscripción válida hasta",
+      "Total": "Total",
+      "makePayment": "Hacer el pago",
+      "cancelTransation": "Cancelar transacción",
+      "trailSuscription": "Ha optado por una prueba gratuita de nuestra suscripción Enterprise.",
+      "trailSuscriptionend": "La suscripción paga comienza cuando finaliza la prueba, a menos que la cancele antes del 11 de noviembre de 2022.",
+      "trailCredit": "Se requiere tarjeta de crédito para facturación futura.",
+      "trailFeactures": "La versión de prueba incluye las mismas funciones que el producto pago."
+  },
+  "subscriptionSuccess": {
+      "trialSuccessHeader": "¡Disfruta de los próximos 30 días de tu prueba gratuita!",
+      "purchaseSuccessHeader": "¡Tu compra se ha completado con éxito!",
+      "confirmationEmailText": "Se enviará un correo de confirmación a su ID de correo electrónico registrado. Para cualquier consulta escríbenos a",
+      "trialEndWarning": "La suscripción paga comienza cuando finaliza la prueba, a menos que la cancele antes del 11 de noviembre de 2022.",
+      "orderSummaryHeader": "Resumen del pedido",
+      "summaryItems": {
+          "subscription": "Suscripción",
+          "orderTotal": "Total del pedido",
+          "orderNumber": "Número de orden",
+          "paymentMethod": "Método de pago",
+          "dateOfPurchase": "Fecha de compra",
+          "subscriptionValidTill": "Suscripción válida hasta"
+      },
+      "goToDashboardButton": "Ir al panel de control",
+      "paymentMethodValue": "Tarjeta de crédito"
+  }
+}

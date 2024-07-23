@@ -1,0 +1,127 @@
+<section class="banner_section">
+
+  
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-7 col-md-10 col-sm-12 col-12">
+        <div class="banner_content ps-lg-4">
+          <h1 class="mb-lg-4 mb-md-4 mb-3 pb-2">{{ 'banner.title' | translate }}</h1>
+          <p>{{ 'banner.description' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fast_accurte px-lg-5">
+  <div class="container-fluid px-lg-3">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="section_img">
+          <!-- <img src="assets/images/new-home/fact-img.png" width="100%" alt> -->
+          <!-- <img src="assets/images/new-home/fact-imgSpanish.png" width="100%" alt> -->
+          <img *ngIf="selectedLanguage === 'en'" src="assets/images/new-home/fact-imgEng.png" width="100%" alt="Real-time Image English">
+          <img *ngIf="selectedLanguage === 'es'" src="assets/images/new-home/fact-imgSpanish.png" width="100%" alt="Real-time Image Spanish">
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-2 d-flex align-items-start pt-lg-5 pt-md-4 pt-3">
+        <div class="section_content pt-lg-5">
+          <h2 class="mb-lg-4 mb-md-4 mb-3 pb-lg-2">{{ 'fast_accurate.title' | translate }}</h2>
+          <p class="mb-0">{{ 'fast_accurate.description' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="real_time">
+  <div class="container-fluid">
+    <div class="row flex-lg-row flex-md-column-reverse flex-column-reverse">
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-1 d-flex align-items-center">
+        <div class="section_content pt-lg-5">
+          <h2 class="mb-lg-4 mb-md-4 mb-3 pb-lg-2">{{ 'real_time.title' | translate }}</h2>
+          <p class="mb-lg-5 mb-0">{{ 'real_time.description' | translate }}</p>
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12 col-sm-12 col-12">
+        <div class="section_img">
+          <!-- <img src="assets/images/new-home/real-time-img.png" width="100%" alt> -->
+          <!-- <img src="assets/images/new-home/real-time-imgSpanish.png" width="100%" alt> -->
+          <img *ngIf="selectedLanguage === 'en'" src="assets/images/new-home/real-time-imgEng.png" width="100%" alt="Real-time Image English">
+          <img *ngIf="selectedLanguage === 'es'" src="assets/images/new-home/real-time-imgSpanish.png" width="100%" alt="Real-time Image Spanish">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ensure px-lg-5">
+  <div class="container-fluid px-lg-3">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="section_img">
+          <!-- <img src="assets/images/new-home/ensure_img.png" width="100%" alt> -->
+          <!-- <img src="assets/images/new-home/ensure_imgSpanish.png" width="100%" alt> -->
+
+          <img *ngIf="selectedLanguage === 'en'" src="assets/images/new-home/ensure_imgEng.png" width="100%" alt="Ensure Image English">
+          <img *ngIf="selectedLanguage === 'es'" src="assets/images/new-home/ensure_imgSpanish.png" width="100%" alt="Ensure Image Spanish">
+
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 col-12 offset-lg-2 d-flex align-items-center">
+        <div class="section_content">
+          <h2 class="mb-lg-4 mb-md-4 mb-3 pb-lg-2">{{ 'ensure.title' | translate }}</h2>
+          <p class="mb-0">{{ 'ensure.description' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="find_the_right px-lg-5" id="elId">
+  <div class="container-fluid px-lg-3">
+    <div class="row flex-lg-row flex-md-column-reverse flex-column-reverse">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12 mt-lg-0 mt-md-4 mt-4">
+        <div class="section_content pb-lg-4">
+          <h2 class="mb-lg-4 mb-md-4 mb-3">{{ 'find_plan.title' | translate }}</h2>
+          <p class="mb-0">{{ 'find_plan.description' | translate }}</p>
+        </div>
+        <div class="packages d-flex align-items-center mt-lg-5 pt-lg-4 mt-md-4 mt-3">
+          <div class="packages_card">
+            <div class="packages_card_detail">
+              <h4>{{ 'find_plan.monthly.title' | translate }}</h4>
+              <a (click)="checkout(packageType.Monthly,true)">{{ 'find_plan.monthly.try_free' | translate }}</a>
+              <ul class="pt-5 pb-4 mb-3">
+                <li>{{packageService.get(packageType.Monthly).users}} {{ 'find_plan.monthly.users' | translate }}</li>
+                <li>{{packageService.get(packageType.Monthly).location}} {{ 'find_plan.monthly.location' | translate }}</li>
+                <li>${{packageService.get(packageType.Monthly).price}} / {{ 'find_plan.monthly.price' | translate }}</li>
+              </ul>
+              <button class="btn btn-outline-primary" (click)="checkout(packageType.Monthly,false)" *ngIf="user?.subscription_plan == 'Yearly'|| !user || user?.subscription_plan == 'Free Plan'">{{ 'find_plan.monthly.buy_now' | translate }}</button>
+              <button class="btn btn-outline-primary" (click)="checkout(packageType.Monthly,false)" *ngIf="user?.subscription_plan== 'Monthly'">{{ 'find_plan.monthly.upgrade_plan' | translate }}</button>
+            </div>
+          </div>
+          <div class="packages_card">
+            <div class="packages_card_detail">
+              <h4>{{ 'find_plan.yearly.title' | translate }}</h4>
+              <a (click)="checkout(packageType.Yearly,true)">{{ 'find_plan.yearly.most_popular' | translate }}</a>
+              <ul class="pt-5 pb-4 mb-3">
+                <li>{{packageService.get(packageType.Yearly).users}} {{ 'find_plan.yearly.users' | translate }}</li>
+                <li>{{packageService.get(packageType.Yearly).location}} {{ 'find_plan.yearly.location' | translate }}</li>
+                <li>${{packageService.get(packageType.Yearly).price}} / {{ 'find_plan.yearly.price' | translate }}</li>
+              </ul>
+              <button class="btn btn-outline-primary" (click)="checkout(packageType.Yearly,false)" *ngIf="user?.subscription_plan == 'Monthly'|| !user || user?.subscription_plan == 'Free Plan'">{{ 'find_plan.yearly.buy_now' | translate }}</button>
+              <button class="btn btn-outline-primary" (click)="checkout(packageType.Yearly,false)" *ngIf="user?.subscription_plan== 'Yearly'">{{ 'find_plan.yearly.upgrade_plan' | translate }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+        <div class="find_img">
+          <img src="assets/images/new-home/find_img.png" width="100%" alt>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
