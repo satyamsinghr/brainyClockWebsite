@@ -10,7 +10,8 @@ import { element } from 'protractor';
 import { PackageService } from '../services/packages.service';
 import {TranslateService} from '@ngx-translate/core';
 import { LanguageService } from '../services/language.service';
-
+import { ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -40,7 +41,6 @@ export class HeaderComponent implements OnInit {
   }
   supportLanguage = ['en','es'];
   selectedLanguage: string = 'en';
-
   constructor(
     private guard: AuthGuard,
     private router: Router,
@@ -52,22 +52,29 @@ export class HeaderComponent implements OnInit {
   ) {
     
     this.getScreenSize();
-    this.router.events.subscribe((res) => {
-      if (res instanceof NavigationStart) {
-        this.currentURL = res.url;
-        if (this.currentURL.length > 1) this.homeUrlStatus = false;
-        else this.homeUrlStatus = true;
-      }
-        this.componentscurrentUrl = this.router.url
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      this.updateCurrentUrl();
     });
     this.translateService.addLangs(this.supportLanguage);
     this.translateService.setDefaultLang('es');
   }
 
+  private updateCurrentUrl() {
+    this.componentscurrentUrl = this.router.url;
+    if (this.componentscurrentUrl.length > 1) {
+      this.homeUrlStatus = false;
+    } else {
+      this.homeUrlStatus = true;
+    }
+    console.log("Current URL:", this.componentscurrentUrl);
+  }
 
  
   userName:any
   ngOnInit(): void {
+    this.updateCurrentUrl()
     const storedLanguage = localStorage.getItem('selectedLanguage');
     if (storedLanguage) {
       this.selectedLanguage = storedLanguage;
@@ -81,9 +88,12 @@ export class HeaderComponent implements OnInit {
      this.url = this.router.url;
     this.isLoggedIn = this.guard.isUserAuthenticated();
     this.isLoggedIn = this.guard.isUserAuthenticate;
-    this.guard.isUserAuthenticate.subscribe(data => {
-      this.user = this.guard.UserInfo();
-    })
+    if (this.guard.isUserAuthenticate) {
+      this.guard.isUserAuthenticate.subscribe(data => {
+        this.user = this.guard.UserInfo();
+      });
+    }
+    if(this.user)
     this.user.subscribe((data: any) => {
       console.warn("User", data)
       this.userName = data.name

@@ -6,7 +6,6 @@
 
         <nav class="navbar navbar-expand-lg navbar-light p-0">
           <a class="navbar-brand" [routerLink]="[ '' ]" *ngIf="componentscurrentUrl == '/'">
-            <!-- <a class="navbar-brand" *ngIf="componentscurrentUrl == '/' "> -->
             <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" fill="none">
               <path
                 d="M7.69721 5.49802C7.69721 5.45021 7.69721 5.49802 7.69721 5.49802C7.50598 5.49802 7.31474 5.49802 7.17132 5.49802C6.07171 5.49802 5.11554 5.73706 4.39841 6.16734C3.68127 6.64543 3.10757 7.17133 2.7251 7.74503V2.72511C2.67729 1.24304 1.48207 0.047821 0 0.047821V12.0478C0 13.7211 0.621514 15.251 1.67331 16.4462C2.86853 17.8805 4.68526 18.741 6.69323 18.741C6.93227 18.741 7.12351 18.7411 7.31474 18.6932C10.7092 18.3586 13.3386 15.5379 13.3386 12.0478C13.3386 8.74902 10.9004 5.97611 7.69721 5.49802ZM9.51394 15.1554C8.749 15.9203 7.79283 16.3506 6.64542 16.3506C5.49801 16.3506 4.54183 15.9681 3.8247 15.1554C3.10757 14.3426 2.7251 13.3387 2.7251 12.0478C2.7251 10.8048 3.10757 9.753 3.8247 8.94025C4.54183 8.1275 5.49801 7.74503 6.64542 7.74503C7.41036 7.74503 8.12749 7.93627 8.7012 8.27093C9.2749 8.6534 9.75299 9.13149 10.0877 9.80081C10.4223 10.4701 10.6135 11.1873 10.6135 12C10.6135 13.3387 10.2789 14.3905 9.51394 15.1554Z"
@@ -42,7 +41,7 @@
                 fill="#FAFAFA" />
             </svg>
           </a>
-          <a *ngIf="componentscurrentUrl != '/' ">
+          <a *ngIf="componentscurrentUrl != '/' " [routerLink]="['/']">
             <svg xmlns="http://www.w3.org/2000/svg" width="128" height="24" viewBox="0 0 128 24" fill="none">
               <path
                 d="M7.69721 5.49805C7.69721 5.45024 7.69721 5.49805 7.69721 5.49805C7.50598 5.49805 7.31474 5.49805 7.17132 5.49805C6.07171 5.49805 5.11554 5.7371 4.39841 6.16737C3.68127 6.64546 3.10757 7.17136 2.7251 7.74506V2.72514C2.67729 1.24307 1.48207 0.0478516 0 0.0478516V12.0479C0 13.7212 0.621514 15.251 1.67331 16.4463C2.86853 17.8805 4.68526 18.7411 6.69323 18.7411C6.93227 18.7411 7.12351 18.7411 7.31474 18.6933C10.7092 18.3586 13.3386 15.5379 13.3386 12.0479C13.3386 8.74905 10.9004 5.97614 7.69721 5.49805ZM9.51394 15.1554C8.749 15.9204 7.79283 16.3506 6.64542 16.3506C5.49801 16.3506 4.54183 15.9682 3.8247 15.1554C3.10757 14.3427 2.7251 13.3387 2.7251 12.0479C2.7251 10.8048 3.10757 9.75303 3.8247 8.94028C4.54183 8.12753 5.49801 7.74506 6.64542 7.74506C7.41036 7.74506 8.12749 7.9363 8.7012 8.27096C9.2749 8.65343 9.75299 9.13152 10.0877 9.80084C10.4223 10.4702 10.6135 11.1873 10.6135 12C10.6135 13.3387 10.2789 14.3905 9.51394 15.1554Z"
@@ -87,13 +86,7 @@
             <ng-container *ngIf="!isLoggedIn.value; else elseTemplate">
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item me-lg-3 d-flex align-items-center">
-                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
-                      <option value="en" >English</option>
-                      <option value="es">Spanish</option>
-                    </select> -->
-
-
+                  <li class="nav-item me-lg-3 d-flex align-items-center darkSelect"    [ngClass]="{'darkSelect': componentscurrentUrl === '/get-app'}">
                     <div class="dropdown languageDropdown">
                       <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -124,13 +117,11 @@
 
                   </li>
                   <li class="nav-item me-lg-4" (click)="ShowLogin()" id="login-toggle">
-                    <!-- <a class="nav-link active" aria-current="page" href="#">Log in</a> -->
-                    <a class="nav-link active" aria-current="page" href="#">{{ 'nav.login' | translate }}</a>
+                    <a class="nav-link active" [ngClass]="{'dark': componentscurrentUrl === '/get-app'}" aria-current="page" href="#">{{ 'nav.login' | translate }}</a>
                   </li>
 
                   <li class="nav-item me-lg-3" (click)="ShowSignup()" id="sign-up-toggle">
-                    <!-- <a class="nav-link" href="#">Sign up</a> -->
-                    <a class="nav-link" href="#">{{ 'nav.signup' | translate }}</a>
+                    <a [ngClass]="{ 'dark': componentscurrentUrl === '/get-app' }" class="nav-link"  href="#">{{ 'nav.signup' | translate }}</a>
                   </li>
                   <li class="nav-item ms-lg-5" (click)="scrollToId('elId')">
                     <a class="nav-link" href="#">{{ 'nav.tryBeforeBuy' | translate }}</a>
@@ -144,11 +135,6 @@
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="componentscurrentUrl !== '/checkout'">
                 <span *ngIf="paymentDone()">
                   <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl=='/'">
-                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
-                      <option value="en">English</option>
-                      <option value="es">Spanish</option>
-                    </select> -->
-
                     <div class="dropdown languageDropdown">
                       <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -178,10 +164,6 @@
                     </div>
                   </li>
                   <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl!=='/'">
-                    <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
-                      <option value="en">English</option>
-                      <option value="es">Spanish</option>
-                    </select> -->
                     <div class="dropdown languageDropdown">
                       <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
@@ -233,9 +215,6 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent" *ngIf="!trial">
               <ul class="navbar-nav ms-auto mb-2 mb-lg-0" *ngIf="componentscurrentUrl !== '/checkout'">
                 <span *ngIf="paymentDone()">
-
-
-
                   <li class="nav-item me-lg-3" *ngIf="user">
                     <a class="nav-link" (click)="goToDashboard()">{{ 'nav.goToDashboard' | translate }}</a>
                   </li>
@@ -243,10 +222,7 @@
 
 
                 <li class="nav-item me-lg-3 d-flex align-items-center darkSelect" *ngIf="componentscurrentUrl!=='/'">
-                  <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                  </select> -->
+                 
                   <div class="dropdown languageDropdown">
                     <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
                       data-bs-toggle="dropdown" aria-expanded="false">
@@ -276,11 +252,7 @@
                   </div>
                 </li>
                 <li class="nav-item me-lg-3 d-flex align-items-center" *ngIf="componentscurrentUrl=='/'">
-                  <!-- <select (change)="selectLang($event.target)" [(ngModel)]="selectedLanguage">
-                    <option value="en">English</option>
-                    <option value="es">Spanish</option>
-                  </select> -->
-                  <div class="dropdown languageDropdown">
+                  <div class="dropdown languageDropdown" >
                     <button class="btn btn-secondary d-flex align-items-center justify-content-between" type="button"
                       data-bs-toggle="dropdown" aria-expanded="false">
                       <div class="d-flex align-items-center gap-3">
@@ -311,7 +283,6 @@
 
 
                 <li class="nav-item me-lg-3" *ngIf="user">
-                  <!-- <a class="nav-link" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl=='/'">Hello, {{user.value.name}}</a> -->
                   <a class="nav-link " [routerLink]="['/profile']">{{ 'nav.helloUser' | translate:{name: user.value.name}
                     }}</a>
                   <a class="nav-link dark" [routerLink]="[ '/profile' ]" *ngIf="componentscurrentUrl!=='/'">{{
@@ -322,7 +293,6 @@
                     }}</a>
                   <a class="nav-link dark" (click)=logout() *ngIf="componentscurrentUrl!=='/' && trial">{{ 'nav.logout'
                     | translate }}</a>
-
                 </li>
 
               </ul>
