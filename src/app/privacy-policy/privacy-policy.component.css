@@ -1,4 +1,4 @@
-  .container {
+  .container-fluid {
     width: 100%;
     max-width: 63%;
     margin: auto;
@@ -16,6 +16,17 @@
   p {
     margin: 0;
   }
+  hr {
+    margin: 1rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25;
+}
+ a {
+    color: rgb(43, 135, 208) !important;
+    text-decoration: none !important;
+}
   .orange
   {
     color: rgb(235,94,40) !important;
@@ -25,11 +36,13 @@
     font-size: 40px;
     color: #000000;
     font-weight: bold;
+    text-align: center;
   }
   .sub-title {
     color: #595959;
     font-size: 14px;
     margin: 10px 0 30px;
+    text-align: center;
   }
   ul {
     list-style-type: disc;
